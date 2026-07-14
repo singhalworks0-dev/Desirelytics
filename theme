@@ -1,0 +1,43 @@
+Here's the consolidated design system used across all the sections we've built:
+Color Scheme — "Premium Red & Purple"
+Background
+
+Base background: bg-[#0a0710] (near-black with slight purple undertone)
+Card backgrounds: bg-white/[0.02] to bg-white/[0.05] (subtle translucent overlays)
+Card borders: border-white/10
+
+Accent gradient (primary brand gradient)
+
+Used for: headline highlight text, buttons, icons, numbers
+from-red-500 via-fuchsia-500 to-purple-500 (text/gradient text)
+from-red-500 to-purple-600 (buttons/solid gradients)
+
+Badge/pill style
+
+Border: border-red-500/30
+Background: bg-gradient-to-r from-red-950/60 to-purple-950/60
+Dot: bg-red-500 with animate-pulse
+Text: gradient from-red-400 to-purple-400 bg-clip-text text-transparent
+
+Glow accents (background blobs)
+
+bg-red-600/10, bg-purple-700/10, bg-fuchsia-600/10 — all blur-3xl rounded-full
+
+Text colors
+
+Headings: text-white
+Body/subtext: text-gray-400 (hover state often text-gray-300)
+Muted/labels: text-gray-500
+
+Hover states
+
+Border glow: hover:border-red-500/40
+Shadow glow: hover:shadow-[0_10px_40px_rgba(225,29,72,0.2)] (varies 0.15–0.25 opacity)
+Text shift: solid white → gradient from-red-400 to-purple-400 bg-clip-text
+
+Font Size Scale (consistent across sections)
+ElementClassesSection badge/eyebrow texttext-[10px] sm:text-xsMain heading (h2)text-2xl sm:text-3xl md:text-4xl 
+lg:text-5xlHero heading (h1, larger)text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xlSubtext/descriptiontext-xs
+ sm:text-sm md:text-baseCard title (h3)text-base sm:text-lg (sometimes text-lg sm:text-xl for feature cards)Card body 
+ texttext-xs sm:text-smStat numberstext-3xl sm:text-4xl md:text-5xlButtonstext-xs sm:text-sm 
+ (sometimes sm:text-base)Small labels/metatext-[10px] sm:text-[11px]
