@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import { MapPin, Mail, Phone, Send, MessageCircle } from "lucide-react";
 
 // Inline brand icons (lucide-react no longer ships these)
@@ -48,68 +49,69 @@ export default function Footer() {
     {
       title: "Services",
       links: [
-        "SEO Strategy",
-        "Local SEO",
-        "Content SEO",
-        "Niche SEO",
-        "Platform SEO",
-        "Industry SEO",
-        "Reputation SEO",
-        "Category SEO",
-        "Site Migration SEO",
-        "Marketplace SEO",
-        "eCommerce SEO",
-        "Retail SEO",
-        "AI Platform SEO",
-        "Affiliate SEO",
-        "Programmatic SEO",
+        { label: "SEO Strategy", href: "#" }, // TODO: no matching page yet
+        { label: "Local SEO", href: "#" }, // TODO: no dedicated page yet
+        { label: "Content SEO", href: "#" }, // TODO: no matching page yet
+        { label: "Niche SEO", href: "/services/niche-ecommerce-seo" }, // closest match — confirm
+        { label: "Platform SEO", href: "/services/platform-seo" },
+        { label: "Industry SEO", href: "#" }, // TODO: no matching page yet
+        { label: "Reputation SEO", href: "#" }, // TODO: no matching page yet
+        { label: "Category SEO", href: "/services/category-seo" },
+        { label: "Site Migration SEO", href: "#" }, // TODO: no matching page yet
+        { label: "Marketplace SEO", href: "/services/marketplace-seo" },
+        { label: "eCommerce SEO", href: "/services/niche-ecommerce-seo" }, // closest match — confirm
+        { label: "Retail SEO", href: "/services/retail-seo" },
+        { label: "AI Platform SEO", href: "/services/ai-companion-seo" }, // closest match — confirm
+        { label: "Affiliate SEO", href: "/services/affiliate-seo" },
+        { label: "Programmatic SEO", href: "/services/programmatic-seo" },
       ],
     },
     {
       title: "Growth & Marketing",
       links: [
-        "Link Building",
-        "Media Buying",
-        "PPC & Paid Ads",
-        "Content Marketing",
-        "Social Marketing",
-        "Email Marketing",
-        "Conversion (CRO)",
-        "Reputation Mgmt",
-        "Penalty Recovery",
-        "Web Design & Dev",
-        "AI Agent Development",
+        { label: "Link Building", href: "/services/link-building" },
+        { label: "Media Buying", href: "#" }, // TODO: no matching page yet
+        { label: "PPC & Paid Ads", href: "#" }, // TODO: no matching page yet
+        { label: "Content Marketing", href: "/services/content-marketing" },
+        { label: "Social Marketing", href: "#" }, // TODO: no matching page yet
+        { label: "Email Marketing", href: "#" }, // TODO: no matching page yet
+        { label: "Conversion (CRO)", href: "#" }, // TODO: no matching page yet
+        { label: "Reputation Mgmt", href: "#" }, // TODO: no matching page yet
+        { label: "Penalty Recovery", href: "#" }, // TODO: no matching page yet
+        { label: "Web Design & Dev", href: "/development/web-design" },
+        { label: "AI Agent Development", href: "/development/ai-agents" },
       ],
     },
     {
       title: "Locations",
+      // TODO: no location-specific pages exist yet — all placeholders
       links: [
-        "United Kingdom",
-        "United States",
-        "India",
-        "Australia",
-        "Canada",
-        "Europe",
-        "Germany",
-        "Dubai & UAE",
-        "Netherlands",
-        "Singapore",
+        { label: "United Kingdom", href: "#" },
+        { label: "United States", href: "#" },
+        { label: "India", href: "#" },
+        { label: "Australia", href: "#" },
+        { label: "Canada", href: "#" },
+        { label: "Europe", href: "#" },
+        { label: "Germany", href: "#" },
+        { label: "Dubai & UAE", href: "#" },
+        { label: "Netherlands", href: "#" },
+        { label: "Singapore", href: "#" },
       ],
     },
     {
       title: "Company",
       links: [
-        "About Us",
-        "Our Process",
-        "Pricing",
-        "Case Studies",
-        "Testimonials",
-        "Blogs",
-        "Q&A",
-        "Free SEO Audit",
-        "Free Tools",
-        "Careers",
-        "Contact",
+        { label: "About Us", href: "/#about", anchor: true }, // needs id="about" on MeetTheTeam.jsx
+        { label: "Our Process", href: "/#process", anchor: true }, // needs id="process" on FullLifecycleStrategy.jsx
+        { label: "Pricing", href: "/#pricing", anchor: true }, // needs id="pricing" on Pricing.jsx (home section)
+        { label: "Case Studies", href: "/case-studies" },
+        { label: "Testimonials", href: "/#testimonials", anchor: true }, // needs id="testimonials" on ClientStories.jsx
+        { label: "Blogs", href: "/#blog", anchor: true }, // needs id="blog" on BlogInsights.jsx
+        { label: "Q&A", href: "/#faq", anchor: true }, // needs id="faq" on FAQ.jsx
+        { label: "Free SEO Audit", href: "/free-audit" },
+        { label: "Free Tools", href: "#" }, // TODO: no matching page yet
+        { label: "Careers", href: "#" }, // TODO: no matching page yet
+        { label: "Contact", href: "/contact" },
       ],
     },
   ];
@@ -195,9 +197,12 @@ export default function Footer() {
                 insights straight to your inbox.
               </p>
 
-              <button className="mt-5 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-red-500 to-purple-600 px-6 py-2.5 text-xs sm:text-sm font-semibold text-white shadow-[0_10px_40px_rgba(225,29,72,0.25)] transition-all hover:shadow-[0_10px_40px_rgba(225,29,72,0.4)] hover:scale-[1.02] active:scale-[0.98]">
+              <Link
+                to="/free-audit"
+                className="mt-5 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-red-500 to-purple-600 px-6 py-2.5 text-xs sm:text-sm font-semibold text-white shadow-[0_10px_40px_rgba(225,29,72,0.25)] transition-all hover:shadow-[0_10px_40px_rgba(225,29,72,0.4)] hover:scale-[1.02] active:scale-[0.98]"
+              >
                 Get Free Audit
-              </button>
+              </Link>
 
               <div className="mt-5 flex flex-col sm:flex-row gap-3">
                 <input
@@ -227,16 +232,28 @@ export default function Footer() {
                 {col.title}
               </h5>
               <ul className="mt-4 space-y-2.5">
-                {col.links.map((link) => (
-                  <li key={link}>
-                    <a
-                      href="#"
-                      className="text-xs sm:text-sm text-gray-400 transition-colors hover:text-transparent hover:bg-gradient-to-r hover:from-red-400 hover:to-purple-400 hover:bg-clip-text"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                ))}
+                {col.links.map((link) =>
+                  link.anchor ? (
+                    // Same-page section link — needs matching id="" on the target component
+                    <li key={link.label}>
+                      <a
+                        href={link.href}
+                        className="text-xs sm:text-sm text-gray-400 transition-colors hover:text-transparent hover:bg-gradient-to-r hover:from-red-400 hover:to-purple-400 hover:bg-clip-text"
+                      >
+                        {link.label}
+                      </a>
+                    </li>
+                  ) : (
+                    <li key={link.label}>
+                      <Link
+                        to={link.href}
+                        className="text-xs sm:text-sm text-gray-400 transition-colors hover:text-transparent hover:bg-gradient-to-r hover:from-red-400 hover:to-purple-400 hover:bg-clip-text"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  )
+                )}
               </ul>
             </div>
           ))}
@@ -248,7 +265,7 @@ export default function Footer() {
         className={`relative mx-auto max-w-6xl border-t border-white/10 pt-6 sm:pt-8 ${reveal()}`}
         style={style(700)}
       >
-<h2 className="select-none text-center font-sans text-[13vw] sm:text-[10vw] md:text-[8vw] font-black leading-none text-gray-300/90 whitespace-nowrap overflow-hidden">
+        <h2 className="select-none text-center font-sans text-[13vw] sm:text-[10vw] md:text-[8vw] font-black leading-none text-gray-300/90 whitespace-nowrap overflow-hidden">
           Desirelyticss
         </h2>
       </div>
