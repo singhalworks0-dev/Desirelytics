@@ -1,114 +1,273 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { Sparkles } from "lucide-react";
+import React, { useEffect, useRef, useState } from "react";
 
-const STATS = [
-  { value: "120+", label: "Platforms launched" },
-  { value: "AI-Native", label: "Content & chat systems" },
-  { value: "2257", label: "Compliance built-in" },
-];
+/**
+ * AdultDevLanding.jsx
+ * Responsive landing page — React + Tailwind CSS
+ * Includes: scroll/entrance animations, basic on-page SEO (title, meta, JSON-LD),
+ * and placeholder mockup graphics (swap with your own real screenshots).
+ */
 
-// Swap these for your own platform screenshots
-const GALLERY = [
-  { src: "/images/adult-dev/shot-1.jpg", className: "row-span-2" },
-  { src: "/images/adult-dev/shot-2.jpg", className: "" },
-  { src: "/images/adult-dev/shot-3.jpg", className: "" },
-  { src: "/images/adult-dev/shot-4.jpg", className: "" },
-  { src: "/images/adult-dev/shot-5.jpg", className: "row-span-2" },
-  { src: "/images/adult-dev/shot-6.jpg", className: "" },
-];
+// ---------- SEO Hook ----------
+function useSEO({ title, description, keywords }) {
+  useEffect(() => {
+    document.title = title;
 
-export default function AdultDevHero() {
-  const [mounted, setMounted] = useState(false);
+    const setMeta = (name, content) => {
+      let tag = document.querySelector(`meta[name="${name}"]`);
+      if (!tag) {
+        tag = document.createElement("meta");
+        tag.setAttribute("name", name);
+        document.head.appendChild(tag);
+      }
+      tag.setAttribute("content", content);
+    };
+
+    setMeta("description", description);
+    setMeta("keywords", keywords);
+    setMeta("robots", "index, follow");
+
+    // Open Graph
+    const setOG = (property, content) => {
+      let tag = document.querySelector(`meta[property="${property}"]`);
+      if (!tag) {
+        tag = document.createElement("meta");
+        tag.setAttribute("property", property);
+        document.head.appendChild(tag);
+      }
+      tag.setAttribute("content", content);
+    };
+    setOG("og:title", title);
+    setOG("og:description", description);
+    setOG("og:type", "website");
+
+    // JSON-LD structured data for a service business
+    let script = document.getElementById("ld-json-seo");
+    if (!script) {
+      script = document.createElement("script");
+      script.type = "application/ld+json";
+      script.id = "ld-json-seo";
+      document.head.appendChild(script);
+    }
+    script.innerText = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      name: "SecureLaunch Studio",
+      description,
+      areaServed: "Worldwide",
+      serviceType: "Web & App Development",
+    });
+  }, [title, description, keywords]);
+}
+
+// ---------- Scroll Reveal Hook ----------
+function useReveal() {
+  const ref = useRef(null);
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const t = setTimeout(() => setMounted(true), 30);
-    return () => clearTimeout(t);
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          obs.unobserve(el);
+        }
+      },
+      { threshold: 0.15 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
   }, []);
 
-  const reveal = () =>
-    `transition-all duration-500 ease-out ${
-      mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-    }`;
-  const style = (delay) => ({ transitionDelay: mounted ? `${delay}ms` : "0ms" });
+  return [ref, visible];
+}
+
+function Reveal({ children, delay = 0, className = "" }) {
+  const [ref, visible] = useReveal();
+  return (
+    <div
+      ref={ref}
+      style={{ transitionDelay: `${delay}ms` }}
+      className={`transition-all duration-700 ease-out ${
+        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+      } ${className}`}
+    >
+      {children}
+    </div>
+  );
+}
+
+// ---------- Placeholder "App Mockup" Graphic ----------
+// Stand-in for real screenshots — swap with <img src="/your-image.jpg" /> later.
+function AppMockup({ gradient, label, tall = false }) {
+  return (
+    <div
+      className={`relative rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10 ${
+        tall ? "h-64" : "h-40"
+      } bg-gradient-to-br ${gradient} flex flex-col justify-between p-4`}
+    >
+      <div className="flex gap-1.5">
+        <span className="w-2 h-2 rounded-full bg-white/40" />
+        <span className="w-2 h-2 rounded-full bg-white/40" />
+        <span className="w-2 h-2 rounded-full bg-white/40" />
+      </div>
+      <div className="space-y-2">
+        <div className="h-2 w-2/3 rounded bg-white/50" />
+        <div className="h-2 w-1/2 rounded bg-white/30" />
+      </div>
+      <span className="text-white/80 text-xs font-semibold tracking-wide uppercase">
+        {label}
+      </span>
+    </div>
+  );
+}
+
+const mockups = [
+  { gradient: "from-rose-600 to-fuchsia-700", label: "Discovery Feed" },
+  { gradient: "from-fuchsia-700 to-purple-800", label: "Creator Profile", tall: true },
+  { gradient: "from-red-600 to-rose-800", label: "Gallery Grid" },
+  { gradient: "from-purple-700 to-pink-600", label: "Subscriptions" },
+  { gradient: "from-rose-700 to-red-900", label: "Live Stream", tall: true },
+  { gradient: "from-pink-600 to-fuchsia-800", label: "Chat & Messaging" },
+];
+
+const features = [
+  { title: "Adult web & mobile app development", icon: "💻" },
+  { title: "Secure video and content management", icon: "🔒" },
+  { title: "Subscription, paywall & token features", icon: "💳" },
+  { title: "Privacy, age-gate & 2257 compliance", icon: "🛡️" },
+];
+
+export default function AdultDevLanding() {
+  useSEO({
+    title: "SecureLaunch Studio | Age-Verified Platform Development",
+    description:
+      "SecureLaunch Studio builds secure, compliant creator-platform websites and apps — custom payments, content protection, and scalable media infrastructure from concept to launch.",
+    keywords:
+      "platform development agency, creator platform development, subscription app development, secure content management, age verification compliance",
+  });
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#0a0710] via-[#120c1e] to-[#0a0710] px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 pb-14 sm:pb-16">
-      {/* Glow blobs */}
-      <div className="pointer-events-none absolute -top-24 left-10 h-72 w-72 rounded-full bg-red-600/10 blur-3xl" />
-      <div className="pointer-events-none absolute top-1/3 -right-20 h-80 w-80 rounded-full bg-purple-700/15 blur-3xl" />
+    <div className="min-h-screen bg-[#0a0612] text-white overflow-x-hidden">
+      {/* ---------- HERO ---------- */}
+      <section className="relative px-6 sm:px-10 lg:px-20 pt-16 pb-20 grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+        {/* ambient glow */}
+        <div className="pointer-events-none absolute -top-32 -left-32 w-96 h-96 bg-fuchsia-700/20 rounded-full blur-3xl animate-pulse" />
+        <div className="pointer-events-none absolute top-40 right-0 w-72 h-72 bg-rose-600/20 rounded-full blur-3xl animate-pulse" />
 
-      <div className="relative mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-8 items-center">
-        {/* LEFT: Copy */}
-        <div>
-          <div className={`inline-flex items-center gap-2 rounded-full border border-red-500/30 bg-gradient-to-r from-red-950/60 to-purple-950/60 px-3.5 py-1.5 text-[11px] font-semibold text-gray-300 ${reveal()}`} style={style(0)}>
-            <Sparkles className="h-3.5 w-3.5 text-red-400" />
-            AI-Powered Adult Platform Development
-          </div>
+        <div className="relative z-10">
+          <Reveal>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+              <span className="bg-gradient-to-r from-rose-500 to-fuchsia-500 bg-clip-text text-transparent">
+                Creator Platform
+              </span>
+              <br />
+              <span className="text-white">Development Studio</span>
+            </h1>
+          </Reveal>
 
-          <h1 className={`mt-4 text-4xl sm:text-5xl md:text-6xl font-black leading-[1.05] ${reveal()}`} style={style(60)}>
-            <span className="bg-gradient-to-r from-red-500 via-fuchsia-500 to-purple-500 bg-clip-text text-transparent">
-              Adult Website
-            </span>
-            <br />
-            <span className="text-white">Development, Built with AI</span>
-          </h1>
+          <Reveal delay={150}>
+            <p className="mt-6 text-slate-300 text-base sm:text-lg leading-relaxed max-w-xl">
+              SecureLaunch Studio is a specialist agency for creator and
+              subscription platforms. We build custom websites and mobile
+              apps — secure payments, privacy tooling, and scalable media
+              architecture — with full-service delivery from concept to
+              launch.
+            </p>
+          </Reveal>
 
-          <p className={`mt-4 max-w-lg text-sm sm:text-base text-gray-400 leading-relaxed ${reveal()}`} style={style(120)}>
-            Custom adult platforms and apps with AI-driven moderation,
-            personalization, and companion chat — secure, compliant, and
-            built to convert.
-          </p>
+          <Reveal delay={300}>
+            <ul className="mt-8 space-y-3">
+              {features.map((f, i) => (
+                <li key={i} className="flex items-center gap-3 text-slate-200">
+                  <span className="flex items-center justify-center w-6 h-6 rounded-full bg-rose-600/20 text-rose-400 text-sm">
+                    ✓
+                  </span>
+                  {f.title}
+                </li>
+              ))}
+            </ul>
+          </Reveal>
 
-          <div className={`mt-6 flex flex-col sm:flex-row gap-3 ${reveal()}`} style={style(180)}>
-            <Link
-              to="/contact"
-              className="rounded-full bg-gradient-to-r from-red-500 to-purple-600 px-7 py-3 text-center text-sm font-bold text-white shadow-[0_10px_40px_rgba(225,29,72,0.25)] transition-all hover:shadow-[0_10px_40px_rgba(225,29,72,0.4)] hover:scale-[1.02] active:scale-[0.98]"
-            >
-              Start a Project
-            </Link>
-            <Link
-              to="/case-studies"
-              className="rounded-full border border-white/15 px-7 py-3 text-center text-sm font-bold text-white transition-all hover:border-white/30 hover:bg-white/[0.04]"
-            >
-              View What We Build
-            </Link>
-          </div>
-
-          {/* Stat row — replaces old checklist */}
-          <div className={`mt-8 grid grid-cols-3 gap-4 border-t border-white/10 pt-5 ${reveal()}`} style={style(240)}>
-            {STATS.map((s) => (
-              <div key={s.label}>
-                <div className="bg-gradient-to-r from-red-400 to-purple-400 bg-clip-text text-lg sm:text-xl font-black text-transparent">
-                  {s.value}
-                </div>
-                <div className="mt-0.5 text-[10px] sm:text-[11px] text-gray-500 leading-tight">
-                  {s.label}
-                </div>
-              </div>
-            ))}
-          </div>
+          <Reveal delay={450}>
+            <div className="mt-10 flex flex-col sm:flex-row gap-4">
+              <button className="px-6 py-3 rounded-full bg-gradient-to-r from-rose-600 to-fuchsia-600 font-semibold hover:scale-105 active:scale-95 transition-transform shadow-lg shadow-fuchsia-900/40">
+                Get a Free Consultation
+              </button>
+              <button className="px-6 py-3 rounded-full border border-white/20 font-semibold hover:bg-white/5 transition-colors">
+                View Our Work
+              </button>
+            </div>
+          </Reveal>
         </div>
 
-        {/* RIGHT: Image collage */}
-        <div className={`relative ${reveal()}`} style={style(140)}>
-          <div className="grid grid-cols-3 auto-rows-[100px] sm:auto-rows-[120px] gap-2.5">
-            {GALLERY.map((img, i) => (
-              <div
-                key={i}
-                className={`relative overflow-hidden rounded-xl sm:rounded-2xl border border-white/10 bg-gradient-to-br from-red-950/40 to-purple-950/40 ${img.className}`}
-              >
-                <img
-                  src={img.src}
-                  alt="Adult platform built by Desirelyticss"
-                  className="h-full w-full object-cover"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
+        {/* Mockup grid */}
+        <div className="relative z-10 grid grid-cols-3 gap-3 sm:gap-4">
+          {mockups.map((m, i) => (
+            <Reveal key={i} delay={i * 100} className={i % 3 === 1 ? "row-span-2" : ""}>
+              <AppMockup {...m} />
+            </Reveal>
+          ))}
+          <Reveal delay={600} className="col-span-3">
+            <div className="mt-2 inline-flex items-center gap-3 bg-black/40 backdrop-blur rounded-xl px-5 py-3 border border-white/10">
+              <span className="text-2xl font-extrabold text-rose-500">120+</span>
+              <span className="text-sm text-slate-300 leading-tight">
+                Platforms
+                <br />
+                designed, built &amp; launched
+              </span>
+            </div>
+          </Reveal>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* ---------- SERVICES ---------- */}
+      <section className="px-6 sm:px-10 lg:px-20 py-20 max-w-7xl mx-auto">
+        <Reveal>
+          <h2 className="text-3xl sm:text-4xl font-bold text-center">
+            What We Build
+          </h2>
+        </Reveal>
+        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            { t: "Custom Platforms", d: "Bespoke web apps tailored to your brand and community." },
+            { t: "Secure Payments", d: "PCI-aware billing, subscriptions, and token economies." },
+            { t: "Content Protection", d: "Watermarking, DRM-style delivery, and access control." },
+            { t: "Compliance & Age Gates", d: "Built-in verification and regulatory-ready workflows." },
+          ].map((s, i) => (
+            <Reveal key={i} delay={i * 120}>
+              <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-fuchsia-500/40 hover:-translate-y-1 transition-all h-full">
+                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-rose-600 to-fuchsia-600 mb-4" />
+                <h3 className="font-semibold text-lg mb-2">{s.t}</h3>
+                <p className="text-sm text-slate-400 leading-relaxed">{s.d}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      {/* ---------- CTA ---------- */}
+      <section className="px-6 sm:px-10 lg:px-20 py-20">
+        <Reveal>
+          <div className="max-w-4xl mx-auto text-center bg-gradient-to-br from-rose-700/30 to-fuchsia-800/30 rounded-3xl border border-white/10 p-10 sm:p-14">
+            <h2 className="text-2xl sm:text-3xl font-bold">
+              Ready to launch your platform?
+            </h2>
+            <p className="mt-3 text-slate-300">
+              Tell us about your project and we'll map out a build plan —
+              free, no obligation.
+            </p>
+            <button className="mt-8 px-8 py-3 rounded-full bg-white text-[#0a0612] font-semibold hover:scale-105 active:scale-95 transition-transform">
+              Start Your Project
+            </button>
+          </div>
+        </Reveal>
+      </section>
+
+      <footer className="px-6 sm:px-10 lg:px-20 py-10 text-center text-slate-500 text-sm border-t border-white/10">
+        © {new Date().getFullYear()} SecureLaunch Studio. All rights reserved.
+      </footer>
+    </div>
   );
 }
