@@ -1,13 +1,13 @@
 import Navbar from "../../constants/Navbar";
-import HeroSection from "../../components/home/Hero_section";
-
+import ServicePageLayout from "../../components/services/ServicePageLayout";
+import liveContentSeoData from "../../data/liveContentSeoData";
 import Footer from "../../constants/Footer";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <HeroSection />
+      <ServicePageLayout data={liveContentSeoData} />
       <Footer />
     </>
   );
