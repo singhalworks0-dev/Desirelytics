@@ -22,7 +22,7 @@ import LocalReach from "../pages/service_pages/LocalReach";
 import Marketplace from "../pages/service_pages/Marketplace";
 import NicheEcommerce from "../pages/service_pages/NicheEcommerce";
 import PlatformSEO from "../pages/service_pages/PlatformSEO";
-import Programmatic from "../pages/service_pages/Progrmmatic";
+import Programmatic from "../pages/service_pages/Programmatic";
 import Retail from "../pages/service_pages/Retail";
 import StreamingSite from "../pages/service_pages/StreamingSite";
 
