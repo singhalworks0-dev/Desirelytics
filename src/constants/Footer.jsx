@@ -139,11 +139,11 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2.5 text-xs sm:text-sm text-gray-400">
                 <Mail className="h-4 w-4 shrink-0 text-red-500" />
-                sales@desirelyticss.com
+                admin@desirelytics.com
               </div>
               <div className="flex items-center gap-2.5 text-xs sm:text-sm text-gray-400">
                 <Phone className="h-4 w-4 shrink-0 text-red-500" />
-                +1 929 230 1231
+                +966576608170
               </div>
             </div>
 

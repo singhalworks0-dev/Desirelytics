@@ -36,6 +36,8 @@ import StreamingSite from "../pages/service_pages/StreamingSite";
 
 import Contact from "../pages/Contact";
 import FreeAudit from "../pages/FreeAudit";
+import BlogPage from "./pages/BlogPage";
+import BlogPost from "./pages/BlogPost";
 
 export default function AppRoutes() {
   return (
@@ -83,6 +85,8 @@ export default function AppRoutes() {
       <Route path="/contact" element={<Contact />} />
 
       <Route path="/free-audit" element={<FreeAudit />} />
+      <Route path="/blog" element={<BlogPage />} />
+      <Route path="/blog/:slug" element={<BlogPost />} />
     </Routes>
   );
 }

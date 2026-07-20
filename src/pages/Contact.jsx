@@ -5,14 +5,14 @@ const CONTACT_METHODS = [
   {
     icon: Mail,
     label: "Email",
-    value: "sales@desirelyticss.com",
-    href: "mailto:sales@desirelyticss.com",
+    value: "admin@desirelytics.com",
+    href: "mailto:admin@desirelytics.com",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+1 929 230 1231",
-    href: "tel:+19292301231",
+    value: "+966576608170",
+    href: "tel:+966576608170",
   },
   {
     icon: MapPin,
