@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 function useInView(threshold = 0.2) {
   const ref = useRef(null);
@@ -64,9 +65,12 @@ export default function FinalCTA() {
           Our fast, secure infrastructure gets you found across AI search
           tools and traditional engines alike — then keeps you there long
           after competitors fade. Start with a free{" "}
-          <span className="text-red-500 font-medium cursor-pointer hover:text-red-600 transition-colors underline decoration-red-300 underline-offset-2">
+          <Link
+            to="/free-audit"
+            className="text-red-500 font-medium hover:text-red-600 transition-colors underline decoration-red-300 underline-offset-2"
+          >
             adult site SEO audit
-          </span>
+          </Link>
           .
         </p>
 
@@ -75,14 +79,14 @@ export default function FinalCTA() {
             inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
-          <button className="group relative inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-red-500 to-purple-600 px-7 py-3 sm:px-8 sm:py-3.5 text-sm sm:text-base font-bold text-white shadow-[0_8px_30px_rgba(225,29,72,0.3)] transition-all duration-300 hover:shadow-[0_12px_40px_rgba(147,51,234,0.4)] hover:-translate-y-1 active:translate-y-0 overflow-hidden">
+          <Link to="/contact" className="group relative inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-red-500 to-purple-600 px-7 py-3 sm:px-8 sm:py-3.5 text-sm sm:text-base font-bold text-white shadow-[0_8px_30px_rgba(225,29,72,0.3)] transition-all duration-300 hover:shadow-[0_12px_40px_rgba(147,51,234,0.4)] hover:-translate-y-1 active:translate-y-0 overflow-hidden">
             {/* Shine sweep effect */}
             <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/25 to-transparent skew-x-12" />
             <span className="relative z-10">Talk to Our SEO Strategists</span>
             <span className="relative z-10 transition-transform duration-300 group-hover:translate-x-1">
               →
             </span>
-          </button>
+          </Link>
         </div>
       </div>
 

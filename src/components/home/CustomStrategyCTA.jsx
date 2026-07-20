@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 function useInView(threshold = 0.2) {
   const ref = useRef(null);
@@ -71,12 +72,12 @@ export default function CustomStrategyCTA() {
         </p>
 
         <div className="mt-8">
-          <button className="group relative inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-red-500 to-fuchsia-600 px-7 py-3 sm:px-8 sm:py-3.5 text-sm sm:text-base font-bold text-white shadow-[0_8px_30px_rgba(225,29,72,0.35)] transition-all duration-300 hover:shadow-[0_8px_40px_rgba(225,29,72,0.5)] hover:-translate-y-0.5 active:translate-y-0">
+          <Link to="/free-audit" className="group relative inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-red-500 to-fuchsia-600 px-7 py-3 sm:px-8 sm:py-3.5 text-sm sm:text-base font-bold text-white shadow-[0_8px_30px_rgba(225,29,72,0.35)] transition-all duration-300 hover:shadow-[0_8px_40px_rgba(225,29,72,0.5)] hover:-translate-y-0.5 active:translate-y-0">
             <span className="relative z-10">Claim Your Free SEO Audit</span>
             <span className="relative z-10 transition-transform duration-300 group-hover:translate-x-1">
               →
             </span>
-          </button>
+          </Link>
         </div>
       </div>
     </section>

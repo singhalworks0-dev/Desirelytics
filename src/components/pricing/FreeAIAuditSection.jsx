@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 /**
  * FreeAIAuditSection.jsx
@@ -107,14 +108,14 @@ export function FreeAIAuditSection() {
               placeholder="Enter your website URL"
               className="flex-1 bg-transparent px-4 py-2.5 text-sm text-slate-800 placeholder:text-slate-400 outline-none rounded-full"
             />
-            <button
-              type="submit"
-              className="group relative px-6 py-2.5 rounded-full font-bold text-white text-sm overflow-hidden transition-transform duration-200 ease-out hover:scale-105 active:scale-95 flex-shrink-0"
+            <Link
+              to="/free-audit"
+              className="group relative flex-shrink-0 px-6 py-2.5 rounded-full font-bold text-white text-sm overflow-hidden transition-transform duration-200 ease-out hover:scale-105 active:scale-95"
             >
               <span className="absolute inset-0 bg-gradient-to-r from-rose-500 to-fuchsia-500 transition-transform duration-200 group-hover:scale-105" />
               <span className="pointer-events-none absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-500 ease-out bg-gradient-to-r from-transparent via-white/30 to-transparent" />
               <span className="relative">Get My Free AI Audit</span>
-            </button>
+            </Link>
           </form>
         </Reveal>
 

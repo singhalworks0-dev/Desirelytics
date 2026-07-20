@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const TRUST_ITEMS = ["Cam Sites", "Tube Sites", "OnlyFans", "Dating & Escort", "eCommerce"];
 
@@ -62,8 +63,8 @@ export default function Hero() {
             }`}
             style={{ transitionDelay: "260ms" }}
           >
-            <a
-              href="/free-audit"
+            <Link
+              to="/free-audit"
               className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-red-500 to-purple-600 px-6 py-3 sm:py-3.5 text-xs sm:text-sm font-bold text-white shadow-[0_8px_30px_rgba(225,29,72,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_40px_rgba(147,51,234,0.45)]"
             >
               <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/25 to-transparent skew-x-12" />
@@ -71,13 +72,13 @@ export default function Hero() {
               <span className="relative z-10 transition-transform duration-300 group-hover:translate-x-1">
                 →
               </span>
-            </a>
-            <a
-              href="/case-studies"
+            </Link>
+            <Link
+              to="/case-studies"
               className="inline-flex items-center rounded-full border border-white/15 px-6 py-3 sm:py-3.5 text-xs sm:text-sm font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-red-500/40 hover:bg-white/[0.03]"
             >
               See Case Studies
-            </a>
+            </Link>
           </div>
 
           {/* Trust bar */}

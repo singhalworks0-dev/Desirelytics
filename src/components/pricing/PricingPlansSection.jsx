@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 /**
  * PricingPlansSection.jsx
@@ -163,7 +164,8 @@ function PlanCard({ tier, price, tagline, features, featured, delay }) {
           ))}
         </ul>
 
-        <button
+        <Link
+          to="/contact"
           className={`group/btn relative mt-8 px-6 py-2.5 rounded-full font-bold text-sm overflow-hidden transition-all duration-200 ease-out hover:scale-105 active:scale-95
             ${
               featured
@@ -179,7 +181,7 @@ function PlanCard({ tier, price, tagline, features, featured, delay }) {
           )}
           <span className="pointer-events-none absolute inset-0 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-500 ease-out bg-gradient-to-r from-transparent via-white/30 to-transparent" />
           <span className="relative">Choose {tier.charAt(0) + tier.slice(1).toLowerCase()}</span>
-        </button>
+        </Link>
       </div>
     </Reveal>
   );

@@ -1,6 +1,6 @@
 import Navbar from "../../constants/Navbar";
 import ServicePageLayout from "../../components/services/ServicePageLayout";
-import platformSeoData from "../../data/platformSeoData";
+import platformSeoData from "../../data_services/platformSeoData";
 
 import Footer from "../../constants/Footer";
 

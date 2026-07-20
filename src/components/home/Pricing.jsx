@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Check } from "lucide-react";
+import { Link } from "react-router-dom";
 
 // Detects touch/coarse-pointer devices so we don't apply tilt where it doesn't make sense
 function useIsTouchDevice() {
@@ -208,7 +209,8 @@ export default function Pricing() {
                 ))}
               </ul>
 
-              <button
+              <Link
+                to="/contact"
                 className={`mt-7 sm:mt-8 w-full rounded-full py-2.5 text-xs sm:text-sm font-semibold transition-all active:scale-[0.98] md:hover:scale-[1.02] ${
                   plan.popular
                     ? "bg-gradient-to-r from-red-500 to-purple-600 text-white shadow-[0_10px_40px_rgba(225,29,72,0.25)]"
@@ -216,7 +218,7 @@ export default function Pricing() {
                 }`}
               >
                 Choose Plan
-              </button>
+              </Link>
 
               <p className="mt-4 sm:mt-5 border-t border-white/10 pt-4 text-center text-[10px] sm:text-[11px] text-gray-500">
                 <span className="font-semibold text-gray-400">Best for:</span>{" "}

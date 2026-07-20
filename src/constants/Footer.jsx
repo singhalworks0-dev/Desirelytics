@@ -46,75 +46,62 @@ export default function Footer() {
   const style = (delay) => ({ transitionDelay: mounted ? `${delay}ms` : "0ms" });
 
   const linkColumns = [
-    {
-      title: "Services",
-      links: [
-        { label: "SEO Strategy", href: "#" }, // TODO: no matching page yet
-        { label: "Local SEO", href: "#" }, // TODO: no dedicated page yet
-        { label: "Content SEO", href: "#" }, // TODO: no matching page yet
-        { label: "Niche SEO", href: "/services/niche-ecommerce-seo" }, // closest match — confirm
-        { label: "Platform SEO", href: "/services/platform-seo" },
-        { label: "Industry SEO", href: "#" }, // TODO: no matching page yet
-        { label: "Reputation SEO", href: "#" }, // TODO: no matching page yet
-        { label: "Category SEO", href: "/services/category-seo" },
-        { label: "Site Migration SEO", href: "#" }, // TODO: no matching page yet
-        { label: "Marketplace SEO", href: "/services/marketplace-seo" },
-        { label: "eCommerce SEO", href: "/services/niche-ecommerce-seo" }, // closest match — confirm
-        { label: "Retail SEO", href: "/services/retail-seo" },
-        { label: "AI Platform SEO", href: "/services/ai-companion-seo" }, // closest match — confirm
-        { label: "Affiliate SEO", href: "/services/affiliate-seo" },
-        { label: "Programmatic SEO", href: "/services/programmatic-seo" },
-      ],
-    },
-    {
-      title: "Growth & Marketing",
-      links: [
-        { label: "Link Building", href: "/services/link-building" },
-        { label: "Media Buying", href: "#" }, // TODO: no matching page yet
-        { label: "PPC & Paid Ads", href: "#" }, // TODO: no matching page yet
-        { label: "Content Marketing", href: "/services/content-marketing" },
-        { label: "Social Marketing", href: "#" }, // TODO: no matching page yet
-        { label: "Email Marketing", href: "#" }, // TODO: no matching page yet
-        { label: "Conversion (CRO)", href: "#" }, // TODO: no matching page yet
-        { label: "Reputation Mgmt", href: "#" }, // TODO: no matching page yet
-        { label: "Penalty Recovery", href: "#" }, // TODO: no matching page yet
-        { label: "Web Design & Dev", href: "/development/web-design" },
-        { label: "AI Agent Development", href: "/development/ai-agents" },
-      ],
-    },
-    {
-      title: "Locations",
-      // TODO: no location-specific pages exist yet — all placeholders
-      links: [
-        { label: "United Kingdom", href: "#" },
-        { label: "United States", href: "#" },
-        { label: "India", href: "#" },
-        { label: "Australia", href: "#" },
-        { label: "Canada", href: "#" },
-        { label: "Europe", href: "#" },
-        { label: "Germany", href: "#" },
-        { label: "Dubai & UAE", href: "#" },
-        { label: "Netherlands", href: "#" },
-        { label: "Singapore", href: "#" },
-      ],
-    },
-    {
-      title: "Company",
-      links: [
-        { label: "About Us", href: "/#about", anchor: true }, // needs id="about" on MeetTheTeam.jsx
-        { label: "Our Process", href: "/#process", anchor: true }, // needs id="process" on FullLifecycleStrategy.jsx
-        { label: "Pricing", href: "/#pricing", anchor: true }, // needs id="pricing" on Pricing.jsx (home section)
-        { label: "Case Studies", href: "/case-studies" },
-        { label: "Testimonials", href: "/#testimonials", anchor: true }, // needs id="testimonials" on ClientStories.jsx
-        { label: "Blogs", href: "/#blog", anchor: true }, // needs id="blog" on BlogInsights.jsx
-        { label: "Q&A", href: "/#faq", anchor: true }, // needs id="faq" on FAQ.jsx
-        { label: "Free SEO Audit", href: "/free-audit" },
-        { label: "Free Tools", href: "#" }, // TODO: no matching page yet
-        { label: "Careers", href: "#" }, // TODO: no matching page yet
-        { label: "Contact", href: "/contact" },
-      ],
-    },
-  ];
+  {
+    title: "Services",
+    links: [
+      { label: "Affiliate SEO", href: "/services/affiliate-seo" },
+      { label: "AI Companion SEO", href: "/services/ai-companion-seo" },
+      { label: "Category SEO", href: "/services/category-seo" },
+      { label: "Content Marketing", href: "/services/content-marketing" },
+      { label: "Directory SEO", href: "/services/directory-seo" },
+      { label: "Link Building", href: "/services/link-building" },
+      { label: "Live Content SEO", href: "/services/live-content-seo" },
+      { label: "Local Reach SEO", href: "/services/local-reach-seo" },
+      { label: "Marketplace SEO", href: "/services/marketplace-seo" },
+      { label: "Niche eCommerce SEO", href: "/services/niche-ecommerce-seo" },
+      { label: "Platform SEO", href: "/services/platform-seo" },
+      { label: "Programmatic SEO", href: "/services/programmatic-seo" },
+      { label: "Retail SEO", href: "/services/retail-seo" },
+      { label: "Streaming Site SEO", href: "/services/streaming-site-seo" },
+    ],
+  },
+
+  {
+    title: "Development",
+    links: [
+      { label: "Web Design", href: "/development/web-design" },
+      { label: "App Development", href: "/development/app-development" },
+      { label: "AI Agents", href: "/development/ai-agents" },
+      { label: "Free Audit", href: "/free-audit" },
+      { label: "Contact", href: "/contact" },
+    ],
+  },
+
+  {
+    title: "Locations",
+    links: [
+      { label: "United Kingdom", href: "/local/uk" },
+      { label: "United States", href: "/local/usa" },
+      { label: "Australia", href: "/local/australia" },
+      { label: "Germany", href: "/local/germany" },
+      { label: "Dubai", href: "/local/dubai" },
+      { label: "Portugal", href: "/local/portugal" },
+    ],
+  },
+
+  {
+    title: "Company",
+    links: [
+      { label: "Home", href: "/" },
+      { label: "Pricing", href: "/pricing" },
+      { label: "Case Studies", href: "/case-studies" },
+      { label: "Free SEO Audit", href: "/free-audit" },
+      { label: "Contact", href: "/contact" },
+      { label: "Blogs", href: "/#blog", anchor: true },
+      
+    ],
+  },
+];
 
   const badges = ["Specialist Team", "100% Confidential", "NDA on Request", "Risk-Free"];
   const socials = [Facebook, Twitter, Send, Linkedin];

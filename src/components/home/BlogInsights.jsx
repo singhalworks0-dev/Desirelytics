@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function BlogInsights() {
   const [mounted, setMounted] = useState(false);
@@ -112,10 +113,10 @@ export default function BlogInsights() {
                   {post.excerpt}
                 </p>
 
-                <button className="mt-4 inline-flex w-fit items-center gap-1.5 text-xs sm:text-sm font-semibold text-red-400 transition-all hover:gap-2.5 hover:text-red-300">
+                <Link to="/contact" className="mt-4 inline-flex w-fit items-center gap-1.5 text-xs sm:text-sm font-semibold text-red-400 transition-all hover:gap-2.5 hover:text-red-300">
                   Read more
                   <ArrowRight className="h-3.5 w-3.5" />
-                </button>
+                </Link>
               </div>
             </article>
           ))}
@@ -126,9 +127,9 @@ export default function BlogInsights() {
           className={`mt-10 sm:mt-14 flex justify-center ${reveal()}`}
           style={style(760)}
         >
-          <button className="rounded-full border border-red-500/40 px-6 sm:px-8 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-red-400 transition-all hover:bg-red-500/10 hover:scale-[1.02] active:scale-[0.98]">
+          <Link to="/contact" className="rounded-full border border-red-500/40 px-6 sm:px-8 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-red-400 transition-all hover:bg-red-500/10 hover:scale-[1.02] active:scale-[0.98]">
             View All Articles
-          </button>
+          </Link>
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 /**
  * PricingHeroSection.jsx
@@ -95,11 +96,11 @@ export default function PricingHeroSection() {
 
         <Reveal delay={300}>
           <div className="mt-9">
-            <button className="group relative px-8 py-3.5 rounded-full font-bold text-white overflow-hidden transition-transform duration-200 ease-out hover:scale-105 active:scale-95">
+            <Link to="/contact" className="group relative px-8 py-3.5 rounded-full font-bold text-white overflow-hidden transition-transform duration-200 ease-out hover:scale-105 active:scale-95">
               <span className="absolute inset-0 bg-gradient-to-r from-rose-500 to-fuchsia-500 transition-transform duration-200 group-hover:scale-105" />
               <span className="pointer-events-none absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-500 ease-out bg-gradient-to-r from-transparent via-white/30 to-transparent" />
               <span className="relative">Get a Custom AI SEO Quote</span>
-            </button>
+            </Link>
           </div>
         </Reveal>
 

@@ -1,12 +1,22 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import AppRoutes from "./routes/AppRoutes";
-// import ScrollToTop from "./components/common/ScrollToTop";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
   return (
     <>
-    <AppRoutes />
-      {/* <ScrollToTop /> */}
-      
+      <ScrollToTop />
+      <AppRoutes />
     </>
   );
 }

@@ -20,12 +20,12 @@ const SEO_SERVICES = [
 
 // TODO: these local pages don't have routes/components yet — update hrefs once created
 const LOCAL_SEO = [
-  { label: "SEO in UK", href: "#" },
-  { label: "SEO in Dubai", href: "#" },
-  { label: "SEO in Portugal", href: "#" },
-  { label: "SEO in USA", href: "#" },
-  { label: "SEO in Australia", href: "#" },
-  { label: "SEO in Germany", href: "#" },
+  { label: "SEO in UK", href: "/local/uk" },
+  { label: "SEO in Dubai", href: "/local/dubai" },
+  { label: "SEO in Portugal", href: "/local/portugal" },
+  { label: "SEO in USA", href: "/local/usa" },
+  { label: "SEO in Australia", href: "/local/australia" },
+  { label: "SEO in Germany", href: "/local/germany" },
 ];
 
 const DEVELOPMENT = [

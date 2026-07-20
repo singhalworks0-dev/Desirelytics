@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 /**
  * CustomQuoteCTASection.jsx
@@ -66,11 +67,11 @@ export function CustomQuoteCTASection() {
         </p>
 
         <div className="mt-8">
-          <button className="group relative px-8 py-3.5 rounded-full font-bold text-white overflow-hidden transition-transform duration-200 ease-out hover:scale-105 active:scale-95">
+          <Link to="/contact" className="group relative px-8 py-3.5 rounded-full font-bold text-white overflow-hidden transition-transform duration-200 ease-out hover:scale-105 active:scale-95">
             <span className="absolute inset-0 bg-slate-900 transition-transform duration-200 group-hover:scale-105" />
             <span className="pointer-events-none absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-500 ease-out bg-gradient-to-r from-transparent via-white/20 to-transparent" />
             <span className="relative">Request Custom Pricing</span>
-          </button>
+          </Link>
         </div>
       </Reveal>
     </section>

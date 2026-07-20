@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function CTABanner() {
   const [mounted, setMounted] = useState(false);
@@ -68,10 +69,10 @@ export default function CTABanner() {
             className={`relative mt-7 sm:mt-9 flex justify-center ${reveal()}`}
             style={style(400)}
           >
-            <button className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-red-500 to-purple-600 px-6 sm:px-8 py-3 sm:py-3.5 text-xs sm:text-sm font-semibold text-white shadow-[0_10px_40px_rgba(225,29,72,0.25)] transition-all hover:shadow-[0_10px_40px_rgba(225,29,72,0.4)] hover:scale-[1.02] active:scale-[0.98]">
+            <Link to="/free-audit" className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-red-500 to-purple-600 px-6 sm:px-8 py-3 sm:py-3.5 text-xs sm:text-sm font-semibold text-white shadow-[0_10px_40px_rgba(225,29,72,0.25)] transition-all hover:shadow-[0_10px_40px_rgba(225,29,72,0.4)] hover:scale-[1.02] active:scale-[0.98]">
               Get My Free Audit
               <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
-            </button>
+            </Link>
           </div>
 
           {/* Trust row */}

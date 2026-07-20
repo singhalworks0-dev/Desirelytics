@@ -1,13 +1,13 @@
 import Navbar from "../../constants/Navbar";
-import ServicePageLayout from "../../components/services/ServicePageLayout";
-import retailSeoData from "../../data_services/retailSeoData";
+import LocationPageLayout from "../../components/local/LocationSeoLayout";
+import ukAdultSeoData from "../../data_local/ukAdultSeoData";
 import Footer from "../../constants/Footer";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <ServicePageLayout data={retailSeoData} />
+      <LocationPageLayout data={ukAdultSeoData} />
       <Footer />
     </>
   );

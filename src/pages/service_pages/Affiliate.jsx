@@ -1,6 +1,6 @@
 import Navbar from "../../constants/Navbar";
 import ServicePageLayout from "../../components/services/ServicePageLayout";
-import affiliateSeoData from "../../data/affiliateSeoData";
+import affiliateSeoData from "../../data_services/affiliateSeoData";
 import Footer from "../../constants/Footer";
 
 export default function Home() {

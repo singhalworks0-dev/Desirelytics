@@ -10,6 +10,14 @@ import WebDesign from "../pages/development_pages/WebDesign";
 import AppDevelopment from "../pages/development_pages/AppDesign";
 import AiAgents from "../pages/development_pages/AiAgent";
 
+// Local Pages
+import Uk from "../pages/local_pages/Uk";
+import Dubai from "../pages/local_pages/Dubai";
+import Portugal from "../pages/local_pages/Portugal";
+import Usa from "../pages/local_pages/Usa";
+import Australia from "../pages/local_pages/Australia";
+import Germany from "../pages/local_pages/Germany";
+
 // Service pages
 import Affiliate from "../pages/service_pages/Affiliate";
 import AiCompanion from "../pages/service_pages/AiCompanion";
@@ -29,8 +37,6 @@ import StreamingSite from "../pages/service_pages/StreamingSite";
 import Contact from "../pages/Contact";
 import FreeAudit from "../pages/FreeAudit";
 
-
-
 export default function AppRoutes() {
   return (
     <Routes>
@@ -44,17 +50,31 @@ export default function AppRoutes() {
       <Route path="/development/app-development" element={<AppDevelopment />} />
       <Route path="/development/ai-agents" element={<AiAgents />} />
 
+      {/* Local */}
+      <Route path="/local/uk" element={<Uk />} />
+      <Route path="/local/dubai" element={<Dubai />} />
+      <Route path="/local/portugal" element={<Portugal />} />
+      <Route path="/local/usa" element={<Usa />} />
+      <Route path="/local/australia" element={<Australia />} />
+      <Route path="/local/germany" element={<Germany />} />
+
       {/* Services */}
       <Route path="/services/affiliate-seo" element={<Affiliate />} />
       <Route path="/services/ai-companion-seo" element={<AiCompanion />} />
       <Route path="/services/category-seo" element={<Category />} />
-      <Route path="/services/content-marketing" element={<ContentMarketing />} />
+      <Route
+        path="/services/content-marketing"
+        element={<ContentMarketing />}
+      />
       <Route path="/services/directory-seo" element={<Directory />} />
       <Route path="/services/link-building" element={<LinkBuilding />} />
       <Route path="/services/live-content-seo" element={<LiveContent />} />
       <Route path="/services/local-reach-seo" element={<LocalReach />} />
       <Route path="/services/marketplace-seo" element={<Marketplace />} />
-      <Route path="/services/niche-ecommerce-seo" element={<NicheEcommerce />} />
+      <Route
+        path="/services/niche-ecommerce-seo"
+        element={<NicheEcommerce />}
+      />
       <Route path="/services/platform-seo" element={<PlatformSEO />} />
       <Route path="/services/programmatic-seo" element={<Programmatic />} />
       <Route path="/services/retail-seo" element={<Retail />} />
@@ -63,7 +83,6 @@ export default function AppRoutes() {
       <Route path="/contact" element={<Contact />} />
 
       <Route path="/free-audit" element={<FreeAudit />} />
-
     </Routes>
   );
 }
