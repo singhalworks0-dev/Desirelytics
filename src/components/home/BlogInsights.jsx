@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
-import { getLatestPosts } from "../lib/wordpress";
+import { getLatestPosts } from "../../lib/wordpress";
 
 export default function BlogInsights() {
   const [mounted, setMounted] = useState(false);

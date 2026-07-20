@@ -36,8 +36,8 @@ import StreamingSite from "../pages/service_pages/StreamingSite";
 
 import Contact from "../pages/Contact";
 import FreeAudit from "../pages/FreeAudit";
-import BlogPage from "./pages/BlogPage";
-import BlogPost from "./pages/BlogPost";
+import BlogPage from "../pages/Blog";
+import BlogPost from "../pages/BlogPost";
 
 export default function AppRoutes() {
   return (
