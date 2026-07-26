@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 /**
  * FinalCTASection.jsx
@@ -80,13 +81,16 @@ export default function FinalCTASection() {
         </Reveal>
 
         <Reveal delay={300}>
-          <button className="group relative mt-9 inline-flex items-center justify-center px-8 py-3.5 rounded-full font-bold text-[#1a0510] bg-gradient-to-r from-rose-500 to-fuchsia-500 overflow-hidden transition-transform duration-300 ease-out hover:scale-105 active:scale-95">
+          <Link
+            to="/contact"
+            className="group relative mt-9 inline-flex items-center justify-center px-8 py-3.5 rounded-full font-bold text-[#1a0510] bg-gradient-to-r from-rose-500 to-fuchsia-500 overflow-hidden transition-transform duration-300 ease-out hover:scale-105 active:scale-95"
+          >
             {/* pulsing glow ring */}
             <span className="pointer-events-none absolute -inset-1 rounded-full bg-gradient-to-r from-rose-500 to-fuchsia-500 opacity-0 group-hover:opacity-60 blur-lg transition-opacity duration-300 -z-10" />
             {/* shine sweep on hover */}
             <span className="pointer-events-none absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out bg-gradient-to-r from-transparent via-white/40 to-transparent" />
-            <span className="relative">Book a Free AI Strategy Call</span>
-          </button>
+            <span className="relative">Contact Us</span>
+          </Link>
         </Reveal>
       </div>
     </section>

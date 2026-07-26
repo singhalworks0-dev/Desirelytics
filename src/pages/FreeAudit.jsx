@@ -66,6 +66,8 @@ export default function FreeAuditTool() {
     }`;
   const style = (delay) => ({ transitionDelay: mounted ? `${delay}ms` : "0ms" });
 
+  const auditUrl = import.meta.env.VITE_AUDIT_API_URL || "/api/audit";
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
@@ -82,7 +84,7 @@ export default function FreeAuditTool() {
 
     setStatus("loading");
     try {
-      const res = await fetch("/api/audit", {
+      const res = await fetch(auditUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ url: target }),

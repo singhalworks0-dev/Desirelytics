@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 /**
  * CaseStudiesHeroSection.jsx
@@ -161,13 +162,19 @@ export default function CaseStudiesHeroSection() {
 
         <Reveal delay={300}>
           <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
-            <button className="group relative px-6 py-2.5 rounded-full font-semibold text-white text-sm overflow-hidden transition-transform duration-300 hover:scale-105 active:scale-95">
+            <Link
+              to="/contact"
+              className="group relative px-6 py-2.5 rounded-full font-semibold text-white text-sm overflow-hidden transition-transform duration-300 hover:scale-105 active:scale-95"
+            >
               <span className="absolute inset-0 bg-gradient-to-r from-rose-500 to-fuchsia-500 transition-transform duration-300 group-hover:scale-105" />
               <span className="relative">Get a Free Proposal</span>
-            </button>
-            <button className="px-6 py-2.5 rounded-full font-semibold text-white text-sm border border-white/20 bg-white/5 transition-all duration-300 hover:bg-white/10 hover:border-white/35 hover:scale-105 active:scale-95">
-              Book a Call
-            </button>
+            </Link>
+            <Link
+              to="/free-audit"
+              className="px-6 py-2.5 rounded-full font-semibold text-white text-sm border border-white/20 bg-white/5 transition-all duration-300 hover:bg-white/10 hover:border-white/35 hover:scale-105 active:scale-95"
+            >
+              Get a Free Audit
+            </Link>
           </div>
         </Reveal>
 

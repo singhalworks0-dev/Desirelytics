@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 /**
  * CaseStudyCTASection.jsx
@@ -71,11 +72,14 @@ export default function CaseStudyCTASection() {
           </p>
 
           <div className="relative mt-8 flex justify-center">
-            <button className="group relative px-8 py-3 rounded-full font-bold text-rose-600 bg-white overflow-hidden transition-transform duration-200 ease-out hover:scale-105 active:scale-95 hover:shadow-xl hover:shadow-black/20">
+            <Link
+              to="/contact"
+              className="group relative px-8 py-3 rounded-full font-bold text-rose-600 bg-white overflow-hidden transition-transform duration-200 ease-out hover:scale-105 active:scale-95 hover:shadow-xl hover:shadow-black/20"
+            >
               {/* shine sweep on hover */}
               <span className="pointer-events-none absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-500 ease-out bg-gradient-to-r from-transparent via-rose-200/60 to-transparent" />
-              <span className="relative">Book a Call</span>
-            </button>
+              <span className="relative">Contact Us</span>
+            </Link>
           </div>
         </div>
       </Reveal>

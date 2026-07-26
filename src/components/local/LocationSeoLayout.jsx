@@ -324,12 +324,19 @@ function SectionHeading({ eyebrow, title, intro, align = "left" }) {
   );
 }
 
+function resolveHref(href) {
+  if (!href || href === "#" || href === "#contact") return "/contact";
+  if (href === "#audit") return "/free-audit";
+  if (/^https?:\/\//i.test(href)) return "/contact";
+  return href;
+}
+
 function Button({ children, href = "#contact", variant = "solid" }) {
   const base =
     "inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold tracking-wide transition-all duration-300";
   const cls = variant === "solid" ? "lsp-btn-primary" : "lsp-btn-outline";
   return (
-    <a href={href} className={`${base} ${cls}`} style={{ color: "var(--text)" }}>
+    <a href={resolveHref(href)} className={`${base} ${cls}`} style={{ color: "var(--text)" }}>
       {children}
     </a>
   );
@@ -762,12 +769,13 @@ function AuditBanner({ data }) {
         </Reveal>
         <Reveal delay={200}>
           <div className="mt-8 flex justify-center">
-            <button
+            <a
+              href="/free-audit"
               className="rounded-full px-8 py-3.5 text-sm font-bold transition-transform hover:-translate-y-0.5"
               style={{ background: "#0a0611", color: "var(--text)" }}
             >
               {data.buttonLabel}
-            </button>
+            </a>
           </div>
           <p className="mt-3 text-xs" style={{ color: "rgba(10,6,17,0.65)" }}>
             {data.footnote}

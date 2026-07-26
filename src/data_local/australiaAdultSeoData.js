@@ -325,7 +325,7 @@ const australiaAdultSeoData = {
     buttonLabel: "Get a Free Proposal",
     buttonHref: "#contact",
     secondaryLabel: "Book a Call",
-    secondaryHref: "https://calendly.com/parmindersaini",
+    secondaryHref: "/contact",
   },
 };
 

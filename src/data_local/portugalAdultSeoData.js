@@ -325,7 +325,7 @@ const portugalAdultSeoData = {
     buttonLabel: "Receber Proposta Gratuita",
     buttonHref: "#contact",
     secondaryLabel: "Marcar Chamada",
-    secondaryHref: "https://calendly.com/parmindersaini",
+    secondaryHref: "/contact",
   },
 };
 

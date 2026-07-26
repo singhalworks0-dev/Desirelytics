@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 /**
  * ServicePageLayout.jsx
@@ -96,11 +97,19 @@ function Eyebrow({ children }) {
   );
 }
 
+function resolveHref(href) {
+  if (!href || href === "#" || href === "#contact") return "/contact";
+  if (href === "#audit") return "/free-audit";
+  if (/^https?:\/\//i.test(href)) return "/contact";
+  return href;
+}
+
 // ---------- Shared primary button ----------
 function PrimaryButton({ children, href = "#", className = "" }) {
+  const resolvedHref = resolveHref(href);
   return (
     <a
-      href={href}
+      href={resolvedHref}
       className={`group relative inline-flex items-center justify-center px-7 py-3 rounded-full font-bold text-white text-sm overflow-hidden transition-transform duration-200 ease-out hover:scale-105 active:scale-95 ${className}`}
     >
       <span className="absolute inset-0 bg-gradient-to-r from-rose-500 to-fuchsia-500 transition-transform duration-200 group-hover:scale-105" />
@@ -309,14 +318,14 @@ function FreeAIAuditSection({ audit }) {
               placeholder="Enter your website URL"
               className="flex-1 bg-transparent px-4 py-2.5 text-sm text-slate-800 placeholder:text-slate-400 outline-none rounded-full"
             />
-            <button
-              type="submit"
+            <Link
+              to="/free-audit"
               className="group relative px-6 py-2.5 rounded-full font-bold text-white text-sm overflow-hidden transition-transform duration-200 ease-out hover:scale-105 active:scale-95 flex-shrink-0"
             >
               <span className="absolute inset-0 bg-gradient-to-r from-rose-500 to-fuchsia-500 transition-transform duration-200 group-hover:scale-105" />
               <span className="pointer-events-none absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-500 ease-out bg-gradient-to-r from-transparent via-white/30 to-transparent" />
               <span className="relative">{audit.buttonLabel || "Get My Free AI Audit"}</span>
-            </button>
+            </Link>
           </form>
         </Reveal>
         {status === "error" && <p className="mt-3 text-xs font-semibold text-rose-500">Please enter a website URL to continue.</p>}

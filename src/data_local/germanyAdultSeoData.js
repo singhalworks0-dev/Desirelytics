@@ -325,7 +325,7 @@ const germanyAdultSeoData = {
     buttonLabel: "Kostenloses Angebot erhalten",
     buttonHref: "#contact",
     secondaryLabel: "Gespräch buchen",
-    secondaryHref: "https://calendly.com/parmindersaini",
+    secondaryHref: "/contact",
   },
 };
 
