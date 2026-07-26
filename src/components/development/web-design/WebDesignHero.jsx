@@ -74,7 +74,7 @@ function useReveal() {
           obs.unobserve(el);
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0.15 },
     );
     obs.observe(el);
     return () => obs.disconnect();
@@ -125,7 +125,11 @@ function AppMockup({ gradient, label, tall = false }) {
 
 const mockups = [
   { gradient: "from-rose-600 to-fuchsia-700", label: "Discovery Feed" },
-  { gradient: "from-fuchsia-700 to-purple-800", label: "Creator Profile", tall: true },
+  {
+    gradient: "from-fuchsia-700 to-purple-800",
+    label: "Creator Profile",
+    tall: true,
+  },
   { gradient: "from-red-600 to-rose-800", label: "Gallery Grid" },
   { gradient: "from-purple-700 to-pink-600", label: "Subscriptions" },
   { gradient: "from-rose-700 to-red-900", label: "Live Stream", tall: true },
@@ -141,7 +145,7 @@ const features = [
 
 export default function AdultDevLanding() {
   useSEO({
-    title: "SecureLaunch Studio | Age-Verified Platform Development",
+    title: "Desirelytics",
     description:
       "SecureLaunch Studio builds secure, compliant creator-platform websites and apps — custom payments, content protection, and scalable media infrastructure from concept to launch.",
     keywords:
@@ -170,10 +174,9 @@ export default function AdultDevLanding() {
           <Reveal delay={150}>
             <p className="mt-6 text-slate-300 text-base sm:text-lg leading-relaxed max-w-xl">
               SecureLaunch Studio is a specialist agency for creator and
-              subscription platforms. We build custom websites and mobile
-              apps — secure payments, privacy tooling, and scalable media
-              architecture — with full-service delivery from concept to
-              launch.
+              subscription platforms. We build custom websites and mobile apps —
+              secure payments, privacy tooling, and scalable media architecture
+              — with full-service delivery from concept to launch.
             </p>
           </Reveal>
 
@@ -205,13 +208,19 @@ export default function AdultDevLanding() {
         {/* Mockup grid */}
         <div className="relative z-10 grid grid-cols-3 gap-3 sm:gap-4">
           {mockups.map((m, i) => (
-            <Reveal key={i} delay={i * 100} className={i % 3 === 1 ? "row-span-2" : ""}>
+            <Reveal
+              key={i}
+              delay={i * 100}
+              className={i % 3 === 1 ? "row-span-2" : ""}
+            >
               <AppMockup {...m} />
             </Reveal>
           ))}
           <Reveal delay={600} className="col-span-3">
             <div className="mt-2 inline-flex items-center gap-3 bg-black/40 backdrop-blur rounded-xl px-5 py-3 border border-white/10">
-              <span className="text-2xl font-extrabold text-rose-500">120+</span>
+              <span className="text-2xl font-extrabold text-rose-500">
+                120+
+              </span>
               <span className="text-sm text-slate-300 leading-tight">
                 Platforms
                 <br />
@@ -231,10 +240,22 @@ export default function AdultDevLanding() {
         </Reveal>
         <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            { t: "Custom Platforms", d: "Bespoke web apps tailored to your brand and community." },
-            { t: "Secure Payments", d: "PCI-aware billing, subscriptions, and token economies." },
-            { t: "Content Protection", d: "Watermarking, DRM-style delivery, and access control." },
-            { t: "Compliance & Age Gates", d: "Built-in verification and regulatory-ready workflows." },
+            {
+              t: "Custom Platforms",
+              d: "Bespoke web apps tailored to your brand and community.",
+            },
+            {
+              t: "Secure Payments",
+              d: "PCI-aware billing, subscriptions, and token economies.",
+            },
+            {
+              t: "Content Protection",
+              d: "Watermarking, DRM-style delivery, and access control.",
+            },
+            {
+              t: "Compliance & Age Gates",
+              d: "Built-in verification and regulatory-ready workflows.",
+            },
           ].map((s, i) => (
             <Reveal key={i} delay={i * 120}>
               <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-fuchsia-500/40 hover:-translate-y-1 transition-all h-full">
@@ -255,8 +276,8 @@ export default function AdultDevLanding() {
               Ready to launch your platform?
             </h2>
             <p className="mt-3 text-slate-300">
-              Tell us about your project and we'll map out a build plan —
-              free, no obligation.
+              Tell us about your project and we'll map out a build plan — free,
+              no obligation.
             </p>
             <button className="mt-8 px-8 py-3 rounded-full bg-white text-[#0a0612] font-semibold hover:scale-105 active:scale-95 transition-transform">
               Start Your Project
