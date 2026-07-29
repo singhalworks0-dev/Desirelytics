@@ -1,3 +1,4 @@
+import Seo from "../components/seo/Seo";   // adjust "../" depth for nested folders
 import Navbar from "../constants/Navbar";
 import HeroSection from "../components/home/Hero_section";
 import TechnicalExcellence from "../components/home/TechnicalExcellence";
@@ -19,6 +20,11 @@ import Footer from "../constants/Footer";
 export default function Home() {
   return (
     <>
+    <Seo
+  title="SEO Agency for Adult, Niche & High-Risk Industries"
+  description="Risk-safe, fully confidential SEO and digital marketing for adult, niche, and high-risk brands. Win rankings on Google and AI search without getting flagged."
+  path="/"
+/>
       <Navbar />
       <HeroSection />
       <TechnicalExcellence />

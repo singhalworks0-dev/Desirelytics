@@ -1,3 +1,4 @@
+import Seo from "../components/seo/Seo";   // adjust "../" depth for nested folders
 import Navbar from "../constants/Navbar";
 import PricingHeroSection from "../components/pricing/PricingHeroSection";
 import PricingPlansSection from "../components/pricing/PricingPlansSection";
@@ -18,6 +19,11 @@ import Footer from "../constants/Footer";
 export default function Home() {
   return (
     <>
+    <Seo
+  title="Pricing & Packages"
+  description="Transparent SEO pricing plans built for adult and niche industry brands. Compare packages and find the right fit for your budget."
+  path="/pricing"
+/>
       <Navbar />
       <PricingHeroSection />
       <PricingPlansSection/>

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import { ArrowRight, Globe, ShieldCheck, Zap, Sparkles } from "lucide-react";
 
 // SEO keywords: "free SEO audit tool", "AI search readiness audit",
@@ -110,10 +111,13 @@ export default function FreeAuditTool() {
                 className="w-full bg-transparent text-sm text-gray-800 placeholder:text-gray-400 focus:outline-none"
               />
             </div>
-            <button className="group inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-rose-500 to-fuchsia-500 px-6 py-3 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:shadow-lg hover:shadow-fuchsia-400/50 hover:brightness-110 active:scale-[0.98]">
+            <Link
+              to="/free-audit"
+              className="group inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-rose-500 to-fuchsia-500 px-6 py-3 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:shadow-lg hover:shadow-fuchsia-400/50 hover:brightness-110 active:scale-[0.98]"
+            >
               Run My Free Audit
               <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
-            </button>
+            </Link>
           </div>
         </div>
 

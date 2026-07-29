@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://desirelytics.com/sitemap.xml

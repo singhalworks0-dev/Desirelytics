@@ -12,6 +12,8 @@ import PricingPackages from "../../components/development/app-design/PricingPack
 import FinalCTASection from "../../components/development/app-design/FinalCTASection";
 import FAQSection from "../../components/development/app-design/FAQSection";
 import RelatedServicesSection from "../../components/development/app-design/RelatedServicesSection";
+import Seo from "../../components/seo/Seo";   // adjust "../" depth for nested folders
+
 
 
 
@@ -20,6 +22,11 @@ import Footer from "../../constants/Footer";
 export default function Home() {
   return (
     <>
+    <Seo
+  title="App Development Services"
+  description="Custom app development for adult and niche industry businesses looking to expand beyond the web."
+  path="/development/app-development"
+/>
       <Navbar />
       <AiAgentHero />
       <TrustStats />

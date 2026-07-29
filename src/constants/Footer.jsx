@@ -122,7 +122,7 @@ export default function Footer() {
           {/* Company info */}
           <div className={reveal()} style={style(0)}>
             <h3 className="text-xl sm:text-2xl font-bold text-white">
-              Desirelyticss
+              Desirelytics
             </h3>
             <p className="mt-2 text-xs sm:text-sm md:text-base font-semibold bg-gradient-to-r from-red-400 to-purple-400 bg-clip-text text-transparent">
               Specialist SEO & Digital Marketing for Modern Brands
@@ -253,7 +253,7 @@ export default function Footer() {
         style={style(700)}
       >
         <h2 className="select-none text-center font-sans text-[13vw] sm:text-[10vw] md:text-[8vw] font-black leading-none text-gray-300/90 whitespace-nowrap overflow-hidden">
-          Desirelyticss
+          Desirelytics
         </h2>
       </div>
 
@@ -262,7 +262,7 @@ export default function Footer() {
         className={`relative mx-auto max-w-6xl flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-white/10 py-6 text-[10px] sm:text-[11px] text-gray-500 ${reveal()}`}
         style={style(800)}
       >
-        <span>© 2026 Desirelyticss · Est. 2023. All rights reserved.</span>
+        <span>© 2026 Desirelytics · Est. 2023. All rights reserved.</span>
 
         <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
           <a href="#" className="hover:text-gray-300 transition-colors">Privacy</a>

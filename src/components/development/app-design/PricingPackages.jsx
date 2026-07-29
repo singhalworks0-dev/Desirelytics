@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import { Check } from "lucide-react";
 
 // SEO keywords: "AI marketing pricing", "AI SEO packages", "AI content
@@ -166,7 +167,8 @@ export default function PricingPackages() {
                 {plan.bestFor}
               </p>
 
-              <button
+              <Link
+                to="/contact"
                 className={`mt-6 w-full rounded-full border py-2.5 text-xs font-semibold transition-all duration-150 ease-out active:scale-[0.97] ${
                   plan.popular
                     ? "border-transparent bg-gradient-to-r from-rose-500 to-fuchsia-500 text-white shadow-lg shadow-fuchsia-500/20 hover:shadow-fuchsia-500/40 hover:brightness-110"
@@ -174,7 +176,7 @@ export default function PricingPackages() {
                 }`}
               >
                 {plan.cta}
-              </button>
+              </Link>
             </div>
           ))}
         </div>

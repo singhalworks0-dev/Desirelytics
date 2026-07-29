@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import { Sparkles, Loader2, AlertCircle, CheckCircle2, Gauge } from "lucide-react";
+import Seo from "../components/seo/Seo";   // adjust "../" depth for nested folders
+import Navbar from "../constants/Navbar";
+import Footer from "../constants/Footer";
 
 const TRUST_TAGS = ["No signup needed", "No paid plan", "Real PageSpeed data", "Instant report"];
 
@@ -106,6 +109,14 @@ export default function FreeAuditTool() {
   };
 
   return (
+     <>
+      <Seo
+        title="Free SEO Audit"
+        description="Get a free, no-obligation SEO and site performance audit — see exactly what's holding your rankings back."
+        path="/free-audit"
+      />
+            <Navbar />
+
     <section className="relative overflow-hidden bg-gradient-to-br from-indigo-600 via-fuchsia-600 to-purple-600 px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
       {/* subtle texture */}
       <div className="pointer-events-none absolute inset-0 opacity-[0.06] bg-[radial-gradient(circle,#fff_1px,transparent_1px)] bg-[size:28px_28px]" />
@@ -243,5 +254,9 @@ export default function FreeAuditTool() {
         )}
       </div>
     </section>
+          <Footer />
+
+        </>
+
   );
 }

@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { MapPin, Mail, Phone, Send, Clock, ShieldCheck } from "lucide-react";
+import Seo from "../components/seo/Seo";   // adjust "../" depth for nested folders
+
 
 const CONTACT_METHODS = [
   {
@@ -65,9 +67,11 @@ export default function Contact() {
 
   return (
     <>
-      {/* SEO: pair this page with <title> + meta description via your head-management tool
-          e.g. "Contact Desirelyticss | Specialist SEO & Adult Platform Development Agency" */}
-      <main className="relative overflow-hidden bg-gradient-to-b from-[#0a0710] via-[#120c1e] to-[#0a0710] px-4 sm:px-6 lg:px-8 pt-10 sm:pt-14 pb-20 sm:pb-28">
+ <Seo
+        title="Contact Us"
+        description="Get in touch with Desirelytics for a confidential consultation on your SEO and digital marketing strategy."
+        path="/contact"
+      />      <main className="relative overflow-hidden bg-gradient-to-b from-[#0a0710] via-[#120c1e] to-[#0a0710] px-4 sm:px-6 lg:px-8 pt-10 sm:pt-14 pb-20 sm:pb-28">
         {/* Background: gradient glows + subtle grid, no photography */}
         <div className="pointer-events-none absolute inset-0 opacity-[0.04] bg-[linear-gradient(to_right,#fff_1px,transparent_1px),linear-gradient(to_bottom,#fff_1px,transparent_1px)] bg-[size:48px_48px]" />
         <div className="pointer-events-none absolute -top-24 left-10 h-72 w-72 rounded-full bg-red-600/10 blur-3xl" />

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 /**
  * AdultDevLanding.jsx
@@ -195,12 +196,18 @@ export default function AdultDevLanding() {
 
           <Reveal delay={450}>
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
-              <button className="px-6 py-3 rounded-full bg-gradient-to-r from-rose-600 to-fuchsia-600 font-semibold hover:scale-105 active:scale-95 transition-transform shadow-lg shadow-fuchsia-900/40">
+              <Link
+                to="/contact"
+                className="px-6 py-3 rounded-full bg-gradient-to-r from-rose-600 to-fuchsia-600 font-semibold hover:scale-105 active:scale-95 transition-transform shadow-lg shadow-fuchsia-900/40 text-center"
+              >
                 Get a Free Consultation
-              </button>
-              <button className="px-6 py-3 rounded-full border border-white/20 font-semibold hover:bg-white/5 transition-colors">
+              </Link>
+              <Link
+                to="/case-studies"
+                className="px-6 py-3 rounded-full border border-white/20 font-semibold hover:bg-white/5 transition-colors text-center"
+              >
                 View Our Work
-              </button>
+              </Link>
             </div>
           </Reveal>
         </div>
@@ -279,9 +286,12 @@ export default function AdultDevLanding() {
               Tell us about your project and we'll map out a build plan — free,
               no obligation.
             </p>
-            <button className="mt-8 px-8 py-3 rounded-full bg-white text-[#0a0612] font-semibold hover:scale-105 active:scale-95 transition-transform">
+            <Link
+              to="/contact"
+              className="mt-8 inline-flex items-center justify-center px-8 py-3 rounded-full bg-white text-[#0a0612] font-semibold hover:scale-105 active:scale-95 transition-transform"
+            >
               Start Your Project
-            </button>
+            </Link>
           </div>
         </Reveal>
       </section>

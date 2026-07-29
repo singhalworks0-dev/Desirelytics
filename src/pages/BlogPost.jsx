@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { getPostBySlug } from "../lib/wordpress";
+import Seo from "../components/seo/Seo";   // adjust "../" depth for nested folders
+
 
 export default function BlogPost() {
   const { slug } = useParams();

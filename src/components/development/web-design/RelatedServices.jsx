@@ -1,24 +1,25 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Sparkles } from "lucide-react";
 
 // Internal-linking / SEO section: swap the href values below for your real
 // service page URLs. Each link is a keyword-rich anchor for topical SEO.
 
 const serviceLinks = [
-  { label: "web app development", href: "#" },
-  { label: "SaaS platform development", href: "#" },
-  { label: "marketplace development", href: "#" },
-  { label: "subscription platform development", href: "#" },
-  { label: "streaming platform development", href: "#" },
-  { label: "booking platform development", href: "#" },
-  { label: "custom CMS development", href: "#" },
-  { label: "API integration services", href: "#" },
+  { label: "web app development", href: "/development/app-development" },
+  { label: "SaaS platform development", href: "/development/ai-agents" },
+  { label: "marketplace development", href: "/services/marketplace-seo" },
+  { label: "subscription platform development", href: "/services/retail-seo" },
+  { label: "streaming platform development", href: "/services/streaming-site-seo" },
+  { label: "booking platform development", href: "/services/live-content-seo" },
+  { label: "custom CMS development", href: "/services/platform-seo" },
+  { label: "API integration services", href: "/contact" },
 ];
 
 const ecommerceLinks = [
-  { label: "eCommerce website development", href: "#" },
-  { label: "online store development", href: "#" },
-  { label: "web development packages & pricing", href: "#" },
+  { label: "eCommerce website development", href: "/services/retail-seo" },
+  { label: "online store development", href: "/services/marketplace-seo" },
+  { label: "web development packages & pricing", href: "/pricing" },
 ];
 
 export default function RelatedServices() {
@@ -33,12 +34,12 @@ export default function RelatedServices() {
     <>
       {links.map((link, i) => (
         <span key={link.label}>
-          <a
-            href={link.href}
+          <Link
+            to={link.href}
             className="font-medium text-rose-400 transition-colors duration-300 hover:text-rose-300"
           >
             {link.label}
-          </a>
+          </Link>
           {i < links.length - 1 ? ", " : " "}
         </span>
       ))}
@@ -89,12 +90,12 @@ export default function RelatedServices() {
           }`}
         >
           Selling products? See our {renderLinks(ecommerceLinks, "")}or compare{" "}
-          <a
-            href="#"
+          <Link
+            to="/pricing"
             className="font-medium text-rose-400 transition-colors duration-300 hover:text-rose-300"
           >
             packages &amp; pricing
-          </a>
+          </Link>
           .
         </p>
       </div>

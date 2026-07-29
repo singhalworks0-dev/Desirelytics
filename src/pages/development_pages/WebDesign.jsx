@@ -14,6 +14,8 @@ import PricingPackages from "../../components/development/web-design/PricingPack
 import Testimonials from "../../components/development/web-design/Testimonials";
 import FAQSection from "../../components/development/web-design/FAQSection";
 import RelatedServices from "../../components/development/web-design/RelatedServices";
+import Seo from "../../components/seo/Seo";   // adjust "../" depth for nested folders
+
 
 
 
@@ -23,6 +25,11 @@ import Footer from "../../constants/Footer";
 export default function Home() {
   return (
     <>
+    <Seo
+  title="Web Design Services"
+  description="Custom, conversion-focused web design for adult and niche industry brands, built to rank and convert."
+  path="/development/web-design"
+/>
       <Navbar />
       <HeroSection />
       <TrustedBySection/>

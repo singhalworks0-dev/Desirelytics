@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import { Check, ArrowRight } from "lucide-react";
 
 // SEO keywords: "AI agent development", "custom AI chatbot development",
@@ -119,13 +120,19 @@ export default function AiAgentHero() {
               mounted ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0"
             }`}
           >
-            <button className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-rose-500 to-fuchsia-500 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-fuchsia-500/20 transition-all duration-300 hover:shadow-fuchsia-500/40 hover:brightness-110">
+            <Link
+              to="/contact"
+              className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-rose-500 to-fuchsia-500 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-fuchsia-500/20 transition-all duration-300 hover:shadow-fuchsia-500/40 hover:brightness-110"
+            >
               Start Building Your AI Agent
               <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
-            </button>
-            <button className="rounded-full border border-white/15 px-6 py-2.5 text-sm font-semibold text-gray-300 transition-all duration-300 hover:border-fuchsia-400/50 hover:text-fuchsia-300">
+            </Link>
+            <Link
+              to="/pricing"
+              className="rounded-full border border-white/15 px-6 py-2.5 text-sm font-semibold text-gray-300 transition-all duration-300 hover:border-fuchsia-400/50 hover:text-fuchsia-300"
+            >
               Explore AI Agent Services
-            </button>
+            </Link>
           </div>
         </div>
 

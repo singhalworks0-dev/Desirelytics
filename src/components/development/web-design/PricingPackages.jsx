@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Check, Sparkles } from "lucide-react";
 
 // SEO focus keywords woven into copy:
@@ -140,7 +141,8 @@ export default function PricingPackages() {
                 ))}
               </ul>
 
-              <button
+              <Link
+                to={plan.cta === "Talk to Us" ? "/contact" : "/pricing"}
                 className={`mt-8 w-full rounded-full border py-2.5 text-xs font-semibold transition-all duration-300 ${
                   plan.popular
                     ? "border-transparent bg-gradient-to-r from-rose-500 to-orange-400 text-white shadow-lg shadow-rose-500/20 hover:shadow-rose-500/40 hover:brightness-110"
@@ -148,7 +150,7 @@ export default function PricingPackages() {
                 }`}
               >
                 {plan.cta}
-              </button>
+              </Link>
             </div>
           ))}
         </div>

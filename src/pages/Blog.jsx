@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Sparkles, Search } from "lucide-react";
 import { getPosts, getCategories } from "../lib/wordpress";
+import Seo from "../components/seo/Seo";   // adjust "../" depth for nested folders
+
 
 export default function BlogPage() {
   const [mounted, setMounted] = useState(false);
@@ -42,6 +44,12 @@ export default function BlogPage() {
   const style = (delay) => ({ transitionDelay: mounted ? `${delay}ms` : "0ms" });
 
   return (
+    <><Seo
+        title="Blog"
+        description="Insights, strategies, and updates on SEO for adult, niche, and high-risk industries."
+        path="/blog"
+      />
+
     <main className="relative overflow-hidden bg-[#0a0710] min-h-screen px-4 sm:px-6 lg:px-8 py-16 sm:py-24 md:py-28">
       {/* Glow blobs */}
       <div className="pointer-events-none absolute -top-16 left-1/3 h-48 w-48 sm:h-72 sm:w-72 rounded-full bg-red-600/10 blur-3xl" />
@@ -255,5 +263,7 @@ export default function BlogPage() {
         )}
       </div>
     </main>
+        </>
+
   );
 }
