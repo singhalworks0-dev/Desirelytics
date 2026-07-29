@@ -1,6 +1,6 @@
 import Navbar from "../../constants/Navbar";
 import LocationPageLayout from "../../components/local/LocationSeoLayout";
-import ukAdultSeoData from "../../data_local/ukAdultSeoData";
+import portugalAdultSeoData from "../../data_local/portugalAdultSeoData";
 import Footer from "../../constants/Footer";
 import Seo from "../../components/seo/Seo";   // adjust "../" depth for nested folders
 
@@ -14,7 +14,7 @@ export default function Home() {
   path="/local/portugal"
 />
       <Navbar />
-      <LocationPageLayout data={ukAdultSeoData} />
+      <LocationPageLayout data={portugalAdultSeoData} />
       <Footer />
     </>
   );
