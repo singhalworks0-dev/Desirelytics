@@ -97,7 +97,7 @@ export default function Footer() {
       { label: "Case Studies", href: "/case-studies" },
       { label: "Free SEO Audit", href: "/free-audit" },
       { label: "Contact", href: "/contact" },
-      { label: "Blogs", href: "/#blog", anchor: true },
+      { label: "Blogs", href: "/blog"},
       
     ],
   },
