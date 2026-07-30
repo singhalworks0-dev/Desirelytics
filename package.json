@@ -7,7 +7,7 @@
     "dev": "vite",
     "sitemap": "node scripts/generate-sitemap.mjs",
     "prebuild": "node scripts/generate-sitemap.mjs",
-    "build": "vite build",
+    "build": "vite-react-ssg build",
     "lint": "eslint .",
     "preview": "vite preview",
     "start": "node server.js"
@@ -19,8 +19,9 @@
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "react-helmet-async": "^3.0.0",
-    "react-router-dom": "^7.18.1",
-    "tailwindcss": "^4.3.2"
+    "react-router-dom": "6.30.4",
+    "tailwindcss": "^4.3.2",
+    "vite-react-ssg": "^0.9.2"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
