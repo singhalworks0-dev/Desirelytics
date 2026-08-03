@@ -48,7 +48,7 @@ function Reveal({ children, delay = 0, className = "" }) {
 }
 
 const trustPills = [
-  "From $1,297/mo",
+  "From $400/mo",
   "AI-Powered Strategy",
   "No Long Lock-In",
   "Penalty-Safe",

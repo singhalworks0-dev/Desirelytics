@@ -81,7 +81,7 @@ export default function Pricing() {
   const plans = [
     {
       name: "Starter",
-      price: "$149",
+      price: "$400",
       period: "/month",
       features: [
         "Keyword research (10-15 niche keywords)",
@@ -94,7 +94,7 @@ export default function Pricing() {
     },
     {
       name: "Pro",
-      price: "$349",
+      price: "$750",
       period: "/month",
       features: [
         "Everything in Starter",
@@ -108,8 +108,8 @@ export default function Pricing() {
     },
     {
       name: "Enterprise",
-      price: "Custom",
-      period: "Pricing",
+      price: "$1,000",
+      period: "/month",
       features: [
         "Everything in Pro",
         "Dedicated account manager",
@@ -211,10 +211,10 @@ export default function Pricing() {
 
               <Link
                 to="/contact"
-                className={`mt-7 sm:mt-8 w-full rounded-full py-2.5 text-xs sm:text-sm font-semibold transition-all active:scale-[0.98] md:hover:scale-[1.02] ${
+                className={`mt-7 sm:mt-8 w-full rounded-full px-6 py-2.5 text-sm font-semibold transition-all active:scale-[0.98] md:hover:scale-[1.02] ${
                   plan.popular
                     ? "bg-gradient-to-r from-red-500 to-purple-600 text-white shadow-[0_10px_40px_rgba(225,29,72,0.25)]"
-                    : "border border-red-500/40 text-red-400 md:hover:bg-red-500/10"
+                    : "border border-red-500/40 text-red-400 hover:bg-red-500/10 hover:text-white"
                 }`}
               >
                 Choose Plan

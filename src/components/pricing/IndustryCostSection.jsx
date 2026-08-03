@@ -65,19 +65,19 @@ const industries = [
       <>
         Cam and live-streaming niches are competitive, so most{" "}
         <KeyLink href="/cam-site-seo">cam site SEO</KeyLink> campaigns start
-        at $1,997/mo (Arousal) and scale to Satisfy as traffic compounds.
+        at $750/mo (Arousal) and scale to Satisfy as traffic compounds.
       </>
     ),
   },
   {
     title: "Adult eCommerce SEO Cost",
-    body: "Adult stores and toy retailers usually run on Arousal ($1,997/mo) for AI-driven product, category and content optimization at scale.",
+    body: "Adult stores and toy retailers usually run on Arousal ($750/mo) for AI-driven product, category and content optimization at scale.",
   },
   {
     title: "OnlyFans & Creator SEO Cost",
     body: (
       <>
-        Creators often start on Foreplay ($1,297/mo); growing{" "}
+        Creators often start on Foreplay ($400/mo); growing{" "}
         <KeyLink href="/onlyfans-seo">OnlyFans SEO</KeyLink> programs move
         up to Arousal for AI-powered content velocity.
       </>
@@ -85,7 +85,7 @@ const industries = [
   },
   {
     title: "Dating Site SEO Cost",
-    body: "Dating and hookup sites are competitive; budget from $1,997/mo (Arousal) upward depending on your target markets and AI-matched keyword strategy.",
+    body: "Dating and hookup sites are competitive; budget from $750/mo (Arousal) upward depending on your target markets and AI-matched keyword strategy.",
   },
   {
     title: "Tube & Porn Site SEO Cost",
@@ -93,7 +93,7 @@ const industries = [
       <>
         High-competition tube and{" "}
         <KeyLink href="/porn-site-seo">porn site SEO</KeyLink> usually needs
-        the Satisfy package ($2,997/mo) for full technical and AI search
+        the Satisfy package ($1,000/mo) for full technical and AI search
         optimization.
       </>
     ),
@@ -104,7 +104,7 @@ const industries = [
       <>
         Local{" "}
         <KeyLink href="/erotic-massage-seo">erotic massage SEO</KeyLink>{" "}
-        often starts on Foreplay ($1,297/mo) with a local and Map Pack
+        often starts on Foreplay ($400/mo) with a local and Map Pack
         focus.
       </>
     ),

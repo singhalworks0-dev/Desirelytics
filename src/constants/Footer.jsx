@@ -66,12 +66,12 @@ export default function Footer() {
     ],
   },
 
-  {
+    {
     title: "Development",
     links: [
       { label: "Web Design", href: "/development/web-design" },
       { label: "App Development", href: "/development/app-development" },
-      { label: "AI Agents", href: "/development/ai-agents" },
+      { label: "Adult Website Development", href: "/development/adult-website-development" },
       { label: "Free Audit", href: "/free-audit" },
       { label: "Contact", href: "/contact" },
     ],

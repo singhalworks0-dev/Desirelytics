@@ -9,7 +9,7 @@ const plans = [
   {
     badge: null,
     name: "Starter Growth",
-    price: "$1,500",
+    price: "$400",
     period: "/ month",
     features: [
       "AI-optimized SEO for up to 20 pages",
@@ -25,7 +25,7 @@ const plans = [
   {
     badge: "MOST POPULAR",
     name: "Growth Engine",
-    price: "$5,000",
+    price: "$750",
     period: "/ month",
     features: [
       "Full AI content & SEO system (site + blog)",
@@ -41,8 +41,8 @@ const plans = [
   {
     badge: null,
     name: "Enterprise Platform",
-    price: "Custom",
-    period: "",
+    price: "$1,000",
+    period: "/ month",
     features: [
       "Multi-brand AI marketing platform",
       "Dedicated AI models & full data ownership",

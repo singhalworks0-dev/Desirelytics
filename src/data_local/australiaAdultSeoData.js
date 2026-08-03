@@ -184,7 +184,7 @@ const australiaAdultSeoData = {
       { label: "Adult Tube SEO", href: "/seo-for-porn-sites/" },
       { label: "Adult Dating SEO", href: "/seo-for-adult-dating-websites/" },
       { label: "Adult Entertainment SEO", href: "/adult-entertainment-marketing-firm/" },
-      { label: "Adult Website Development", href: "/adult-website-development/" },
+      { label: "Adult Website Development", href: "/development/adult-website-development/" },
       { label: "Adult SEO Case Studies", href: "/case-studies/" },
     ],
   },

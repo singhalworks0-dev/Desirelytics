@@ -214,7 +214,7 @@ const ukAdultSeoData = {
       { label: "Adult Entertainment SEO", href: "/adult-entertainment-marketing-firm/" },
       { label: "Erotic Massage SEO", href: "/erotic-massage-seo/" },
       { label: "Foot Fetish SEO", href: "/foot-fetish-seo-services/" },
-      { label: "Adult Website Development", href: "/adult-website-development/" },
+      { label: "Adult Website Development", href: "/development/adult-website-development/" },
       { label: "Adult SEO Case Studies", href: "/case-studies/" },
     ],
   },

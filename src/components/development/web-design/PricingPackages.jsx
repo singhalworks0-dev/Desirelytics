@@ -9,8 +9,8 @@ const plans = [
   {
     badge: null,
     name: "Starter",
-    price: "$2,500",
-    period: "/ one-off",
+    price: "$400",
+    period: "/ month",
     features: [
       "Custom homepage + 5 inner pages",
       "Responsive CMS-powered UI",
@@ -24,8 +24,8 @@ const plans = [
   {
     badge: "MOST POPULAR",
     name: "Growth",
-    price: "$9,000",
-    period: "/ project",
+    price: "$750",
+    period: "/ month",
     features: [
       "Full custom website or web app",
       "Secure payments & subscriptions",
@@ -39,8 +39,8 @@ const plans = [
   {
     badge: null,
     name: "Enterprise",
-    price: "Custom",
-    period: "",
+    price: "$1,000",
+    period: "/ month",
     features: [
       "Full-scale platform or marketplace build",
       "High-traffic cloud + CDN architecture",

@@ -186,7 +186,7 @@ export const onlyfansSeoData = {
         links: [
           { label: "adult eCommerce SEO", href: "/adult-ecommerce-seo" },
           { label: "adult toy store SEO", href: "/adult-toy-store-seo" },
-          { label: "adult website development", href: "/adult-website-development" },
+          { label: "adult website development", href: "/development/adult-website-development" },
           { label: "adult SEO packages & pricing", href: "/pricing" },
         ],
         suffix: ".",

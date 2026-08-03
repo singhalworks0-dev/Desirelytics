@@ -50,7 +50,7 @@ function Reveal({ children, delay = 0, className = "" }) {
 const plans = [
   {
     tier: "FOREPLAY",
-    price: "$1,297",
+    price: "$400",
     tagline: "New adult sites, creators and small brands",
     features: [
       "Basic SEO audit",
@@ -64,7 +64,7 @@ const plans = [
   },
   {
     tier: "AROUSAL",
-    price: "$1,997",
+    price: "$750",
     tagline: "Adult eCommerce, AI tools, dating, webcam & affiliate sites",
     features: [
       "Full SEO audit",
@@ -79,7 +79,7 @@ const plans = [
   },
   {
     tier: "SATISFY",
-    price: "$2,997",
+    price: "$1,000",
     tagline: "Competitive adult brands, SaaS, marketplaces & large affiliate sites",
     features: [
       "Advanced SEO audit",
@@ -166,21 +166,13 @@ function PlanCard({ tier, price, tagline, features, featured, delay }) {
 
         <Link
           to="/contact"
-          className={`group/btn relative mt-8 px-6 py-2.5 rounded-full font-bold text-sm overflow-hidden transition-all duration-200 ease-out hover:scale-105 active:scale-95
-            ${
-              featured
-                ? "text-white"
-                : "text-rose-400 border border-rose-500/50 hover:text-white"
-            }
-          `}
+          className={`mt-8 w-full rounded-full px-6 py-2.5 text-sm font-semibold transition-all duration-200 ease-out active:scale-95 hover:scale-105 ${
+            featured
+              ? "bg-gradient-to-r from-rose-500 to-fuchsia-500 text-white shadow-lg"
+              : "border border-rose-500/40 text-rose-300 hover:bg-rose-500/10 hover:text-white"
+          }`}
         >
-          {featured ? (
-            <span className="absolute inset-0 bg-gradient-to-r from-rose-500 to-fuchsia-500 transition-transform duration-200 group-hover/btn:scale-105" />
-          ) : (
-            <span className="absolute inset-0 bg-rose-500 scale-x-0 origin-left transition-transform duration-200 group-hover/btn:scale-x-100" />
-          )}
-          <span className="pointer-events-none absolute inset-0 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-500 ease-out bg-gradient-to-r from-transparent via-white/30 to-transparent" />
-          <span className="relative">Choose {tier.charAt(0) + tier.slice(1).toLowerCase()}</span>
+          Choose {tier.charAt(0) + tier.slice(1).toLowerCase()}
         </Link>
       </div>
     </Reveal>

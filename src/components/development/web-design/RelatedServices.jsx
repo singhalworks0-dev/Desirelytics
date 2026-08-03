@@ -7,7 +7,7 @@ import { Sparkles } from "lucide-react";
 
 const serviceLinks = [
   { label: "web app development", href: "/development/app-development" },
-  { label: "SaaS platform development", href: "/development/ai-agents" },
+  { label: "SaaS platform development", href: "/development/adult-website-development" },
   { label: "marketplace development", href: "/services/marketplace-seo" },
   { label: "subscription platform development", href: "/services/retail-seo" },
   { label: "streaming platform development", href: "/services/streaming-site-seo" },

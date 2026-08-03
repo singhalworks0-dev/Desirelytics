@@ -26,17 +26,24 @@ const LOCAL_SEO = [
   { label: "SEO in USA", href: "/local/usa" },
   { label: "SEO in Australia", href: "/local/australia" },
   { label: "SEO in Germany", href: "/local/germany" },
-  { label: "SEO in Lucknow", href: "/local/lucknow" },
-  { label: "SEO in Gurugram", href: "/local/gurugram" },
-  { label: "SEO in Bengaluru", href: "/local/bangalore" },
+  {
+    label: "SEO in India",
+    items: [
+      { label: "SEO in Lucknow", href: "/local/lucknow" },
+      { label: "SEO in Bengaluru", href: "/local/bangalore" },
+      { label: "SEO in Gurugram", href: "/local/gurugram" },
+    ],
+  },
 
 
 ];
 
+// (Nested India links are now part of LOCAL_SEO)
+
 const DEVELOPMENT = [
   { label: "Website Development", href: "/development/web-design" },
   { label: "App Development", href: "/development/app-development" },
-  { label: "Adult Website Development", href: "/development/ai-agents" },
+  { label: "Adult Website Development", href: "/development/adult-website-development" },
 ];
 
 const NAV_LINKS = [
@@ -81,7 +88,7 @@ export default function Navbar() {
   const handleLeave = () => {
     closeTimer.current = setTimeout(() => {
       setOpenDropdown(null);
-    }, 250);
+    }, 400);
   };
 
   const reveal = () =>
@@ -151,6 +158,8 @@ export default function Navbar() {
                 className="relative w-full md:w-auto"
                 onMouseEnter={() => link.items && handleEnter(link.label)}
                 onMouseLeave={() => link.items && handleLeave()}
+                onFocusCapture={() => link.items && handleEnter(link.label)}
+                onBlurCapture={() => link.items && handleLeave()}
               >
                 {link.items ? (
                   <>
@@ -206,14 +215,7 @@ export default function Navbar() {
                               </li>
                             ))}
                           </ul>
-                          <div className="mt-4 hidden md:block border-t border-white/10 pt-3">
-                            <Link
-                              to="/seo-services"
-                              className="text-xs font-semibold text-red-400 hover:text-red-300"
-                            >
-                              View all services →
-                            </Link>
-                          </div>
+                          
                         </div>
                       </div>
                     )}
@@ -235,10 +237,54 @@ export default function Navbar() {
                         <div className="md:rounded-xl md:border md:border-white/10 md:bg-[#120c1e] md:p-2 md:shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
                           <ul className="list-none">
                             {link.items.map((item) => (
-                              <li key={item.label}>
-                                <Link to={item.href} className={dropdownLinkClass}>
-                                  {item.label}
-                                </Link>
+                              <li key={item.label} className="relative group">
+                                {item.items ? (
+                                  <>
+                                    <div className={`${dropdownLinkClass} flex items-center justify-between`}> 
+                                      <span>{item.label}</span>
+                                      <svg className="h-3 w-3 text-red-400" viewBox="0 0 10 6" fill="none">
+                                        <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                      </svg>
+                                    </div>
+
+                                    {/* Desktop submenu (appears to the right) - use opacity + pointer-events so hover remains active when moving into submenu */}
+                                    <div
+                                      className={`md:absolute md:left-full md:top-0 md:ml-0 md:transition-opacity md:duration-150 ${
+                                        openDropdown === link.label
+                                          ? "md:opacity-100 md:pointer-events-auto"
+                                          : "md:opacity-0 md:pointer-events-none"
+                                      }`}
+                                      onMouseEnter={() => {
+                                        if (closeTimer.current) clearTimeout(closeTimer.current);
+                                        setOpenDropdown(link.label);
+                                      }}
+                                      onMouseLeave={() => {
+                                        closeTimer.current = setTimeout(() => setOpenDropdown(null), 400);
+                                      }}
+                                    >
+                                      <div className="md:rounded-xl md:border md:border-white/10 md:bg-[#120c1e] md:p-3 md:w-56 md:min-w-[220px] md:shadow-lg">
+                                        {item.items.map((sub) => (
+                                          <Link key={sub.label} to={sub.href} className={dropdownLinkClass + " block"}>
+                                            {sub.label}
+                                          </Link>
+                                        ))}
+                                      </div>
+                                    </div>
+
+                                    {/* Mobile submenu (stacked under parent) */}
+                                    <div className="block md:hidden mt-2 pl-4">
+                                      {item.items.map((sub) => (
+                                        <Link key={sub.label} to={sub.href} className={dropdownLinkClass + " block"}>
+                                          {sub.label}
+                                        </Link>
+                                      ))}
+                                    </div>
+                                  </>
+                                ) : (
+                                  <Link to={item.href} className={dropdownLinkClass}>
+                                    {item.label}
+                                  </Link>
+                                )}
                               </li>
                             ))}
                           </ul>

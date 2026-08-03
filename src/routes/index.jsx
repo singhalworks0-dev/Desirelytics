@@ -8,7 +8,7 @@ import CaseStudies from "../pages/CaseStudies";
 // Development pages
 import WebDesign from "../pages/development_pages/WebDesign";
 import AppDevelopment from "../pages/development_pages/AppDesign";
-import AiAgents from "../pages/development_pages/AiAgent";
+import AdultWebsiteDevelopment from "../pages/development_pages/AdultWebsiteDevelopment";
 
 // Local pages
 import Uk from "../pages/local_pages/Uk";
@@ -55,7 +55,7 @@ const routes = [
 
       { path: "development/web-design", element: <WebDesign /> },
       { path: "development/app-development", element: <AppDevelopment /> },
-      { path: "development/ai-agents", element: <AiAgents /> },
+      { path: "development/adult-website-development", element: <AdultWebsiteDevelopment /> },
 
       { path: "local/uk", element: <Uk /> },
       { path: "local/dubai", element: <Dubai /> },

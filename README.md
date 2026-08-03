@@ -44,7 +44,7 @@ The project includes routes for:
 - /blog and /blog/:slug
 - /development/web-design
 - /development/app-development
-- /development/ai-agents
+/development/adult-website-development
 - /local/uk, /local/dubai, /local/portugal, /local/usa, /local/australia, /local/germany
 - /services/* for SEO service pages such as affiliate, category, content marketing, directory, link building, live content, local reach, marketplace, niche e-commerce, platform SEO, programmatic SEO, retail, and streaming site SEO
 

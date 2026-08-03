@@ -18,7 +18,7 @@ const staticRoutes = [
 
   { path: "/development/web-design", priority: "0.7", changefreq: "monthly" },
   { path: "/development/app-development", priority: "0.7", changefreq: "monthly" },
-  { path: "/development/ai-agents", priority: "0.7", changefreq: "monthly" },
+  { path: "/development/adult-website-development", priority: "0.7", changefreq: "monthly" },
 
   { path: "/local/uk", priority: "0.6", changefreq: "monthly" },
   { path: "/local/dubai", priority: "0.6", changefreq: "monthly" },

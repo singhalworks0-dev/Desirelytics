@@ -184,7 +184,7 @@ const portugalAdultSeoData = {
       { label: "SEO de Sites de Vídeo Adulto", href: "/seo-for-porn-sites/" },
       { label: "SEO de Dating Adulto", href: "/seo-for-adult-dating-websites/" },
       { label: "SEO de Entretenimento Adulto", href: "/adult-entertainment-marketing-firm/" },
-      { label: "Desenvolvimento de Sites Adultos", href: "/adult-website-development/" },
+      { label: "Desenvolvimento de Sites Adultos", href: "/development/adult-website-development/" },
       { label: "Casos de Estudo de SEO Adulto", href: "/case-studies/" },
     ],
   },

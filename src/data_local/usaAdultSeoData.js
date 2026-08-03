@@ -186,7 +186,7 @@ const usaAdultSeoData = {
       { label: "Adult Tube SEO", href: "/seo-for-porn-sites/" },
       { label: "Adult Dating SEO", href: "/seo-for-adult-dating-websites/" },
       { label: "Adult Entertainment SEO", href: "/adult-entertainment-marketing-firm/" },
-      { label: "Adult Website Development", href: "/adult-website-development/" },
+      { label: "Adult Website Development", href: "/development/adult-website-development/" },
       { label: "Adult SEO Case Studies", href: "/case-studies/" },
     ],
   },
@@ -239,7 +239,7 @@ const usaAdultSeoData = {
     tiers: [
       {
         name: "Starter",
-        price: "$999/mo",
+        price: "$400/mo",
         subtitle: "New & small US adult sites and creators",
         features: [
           "Adult SEO audit for the USA",
@@ -253,7 +253,7 @@ const usaAdultSeoData = {
       },
       {
         name: "Growth",
-        price: "$1,799/mo",
+        price: "$750/mo",
         subtitle: "Scaling US ecommerce, cam, dating & affiliate sites",
         badge: "Most Popular",
         featured: true,
@@ -269,7 +269,7 @@ const usaAdultSeoData = {
       },
       {
         name: "Authority",
-        price: "$2,999/mo",
+        price: "$1,000/mo",
         subtitle: "Competitive US adult brands & marketplaces",
         features: [
           "Everything in Growth, scaled",
@@ -303,7 +303,8 @@ const usaAdultSeoData = {
     eyebrow: "Answers",
     title: "Adult SEO Agency USA – Frequently Asked Questions",
     items: [
-      { q: "How much does an adult SEO agency in the USA cost?", a: "Our US adult SEO plans start at $999/month (Starter), with Growth at $1,799/month and Authority at $2,999/month; large platforms get a custom Enterprise quote. There's no lock-in and no hidden fees." },
+      { q: "How much does an adult SEO agency in the USA cost?", a: "Our US adult SEO plans start at $400/month (Starter), with Growth at $750/month and Authority at $1,000/month; large platforms get a custom Enterprise quote. There's no lock-in and no hidden fees." },
+      { q: "How much does this service cost?", a: "Plans start at $400/month (Starter), with Growth at $750/month and Authority at $1,000/month; large platforms get a custom Enterprise quote." },
       { q: "How long until my adult website ranks in the USA?", a: "Most clients see early movement on long-tail US keywords within 60–90 days, with competitive head terms building over 4–8 months." },
       { q: "Can you actually rank an adult website on Google in the USA?", a: "Yes. We've ranked adult ecommerce, cam, dating, and subscription sites on page one of Google US. Adult content is allowed in organic search — it just demands compliant, white-hat SEO." },
       { q: "Do you optimise for AI Overviews and answer engines like ChatGPT?", a: "Yes — it's built into every US campaign. We structure content, schema and entities so your brand can be cited in Google AI Overviews and recommended by ChatGPT, Gemini, Claude and Perplexity." },

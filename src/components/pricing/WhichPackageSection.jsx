@@ -45,15 +45,15 @@ function Reveal({ children, delay = 0, className = "" }) {
 const picks = [
   {
     title: "Pick Foreplay if…",
-    desc: "You're a new adult site, solo creator or small brand building your first foundation of AI-optimized rankings and traffic — starting at $1,297/mo.",
+    desc: "You're a new adult site, solo creator or small brand building your first foundation of AI-optimized rankings and traffic — starting at $400/mo.",
   },
   {
     title: "Pick Arousal if…",
-    desc: "You run adult eCommerce, an AI tool, a dating, webcam or affiliate site and want serious, AI-powered scalable growth at $1,997/mo.",
+    desc: "You run adult eCommerce, an AI tool, a dating, webcam or affiliate site and want serious, AI-powered scalable growth at $750/mo.",
   },
   {
     title: "Pick Satisfy if…",
-    desc: "You're a competitive adult brand, SaaS, marketplace or large affiliate site that needs to dominate with full AI search optimization at $2,997/mo.",
+    desc: "You're a competitive adult brand, SaaS, marketplace or large affiliate site that needs to dominate with full AI search optimization at $1,000/mo.",
   },
 ];
 

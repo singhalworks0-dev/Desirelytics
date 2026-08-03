@@ -117,7 +117,7 @@ export default function RelatedServicesSection() {
               adult toy store SEO
             </ServiceLink>{" "}
             and{" "}
-            <ServiceLink href="/adult-website-development">
+            <ServiceLink href="/development/adult-website-development">
               adult website development
             </ServiceLink>{" "}
             services, or compare{" "}

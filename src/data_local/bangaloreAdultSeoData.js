@@ -228,7 +228,7 @@ const bangaloreAdultSeoData = {
     tiers: [
       {
         name: "Starter",
-        price: "$1,199/mo",
+        price: "$400/mo",
         subtitle: "Early-stage adult SaaS and creator-tech products",
         features: [
           "SEO audit",
@@ -240,9 +240,9 @@ const bangaloreAdultSeoData = {
         ],
         ctaLabel: "Choose Starter",
       },
-      {
-        name: "Growth",
-        price: "$2,199/mo",
+        {
+          name: "Growth",
+          price: "$750/mo",
         subtitle: "Scaling adult SaaS, dating-tech & subscription platforms",
         badge: "Most Popular",
         featured: true,
@@ -256,9 +256,9 @@ const bangaloreAdultSeoData = {
         ],
         ctaLabel: "Choose Growth",
       },
-      {
-        name: "Authority",
-        price: "$3,799/mo",
+        {
+          name: "Authority",
+          price: "$1,000/mo",
         subtitle: "Well-funded, competitive adult-tech platforms",
         features: [
           "Everything in Growth, scaled",
@@ -293,7 +293,7 @@ const bangaloreAdultSeoData = {
     title: "Bangalore-Based Adult-Tech SEO – Frequently Asked Questions",
     items: [
       { q: "Is adult content legal to market from Bangalore?", a: "No — pornographic and obscene content is restricted under Indian law, both to host and to advertise. We only support companies selling legal software, subscription or creator-platform products, targeted at markets where those products are permitted." },
-      { q: "How much does this service cost?", a: "Plans start at $1,199/month (Starter), with Growth at $2,199/month and Authority at $3,799/month; large platforms get a custom Enterprise quote." },
+        { q: "How much does this service cost?", a: "Plans start at $400/month (Starter), with Growth at $750/month and Authority at $1,000/month; large platforms get a custom Enterprise quote." },
       { q: "How long until my platform ranks in my target markets?", a: "Most clients see early movement on long-tail keywords within 60–90 days, with competitive terms building over 4–8 months." },
       { q: "Can a Bangalore-based company really rank internationally?", a: "Yes. Company location doesn't determine where you can rank — we build content and technical architecture around your actual target markets and their laws." },
       { q: "Do you optimise for AI Overviews and ChatGPT?", a: "Yes — it's built into every campaign. We structure content, schema and entities so your brand can be cited by Google AI Overviews, ChatGPT, Gemini and Perplexity in your target markets." },

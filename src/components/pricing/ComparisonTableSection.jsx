@@ -47,9 +47,9 @@ function Reveal({ children, delay = 0, className = "" }) {
 }
 
 const columns = [
-  { key: "foreplay", name: "Foreplay", price: "$1,297/mo", featured: false },
-  { key: "arousal", name: "Arousal", price: "$1,997/mo", featured: true },
-  { key: "satisfy", name: "Satisfy", price: "$2,997/mo", featured: false },
+  { key: "foreplay", name: "Foreplay", price: "$400/mo", featured: false },
+  { key: "arousal", name: "Arousal", price: "$750/mo", featured: true },
+  { key: "satisfy", name: "Satisfy", price: "$1,000/mo", featured: false },
 ];
 
 const rows = [

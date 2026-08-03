@@ -10,7 +10,7 @@ import React, { useEffect, useState } from "react";
 const faqs = [
   {
     q: "How much does adult SEO cost?",
-    a: "Our adult SEO packages start at $1,297/mo for new sites and creators, scaling to $2,997/mo for competitive brands and marketplaces. Final pricing depends on niche competition, current site health, and growth goals.",
+    a: "Our adult SEO packages start at $400/mo for new sites and creators, scaling to $1,000/mo for competitive brands and marketplaces. Final pricing depends on niche competition, current site health, and growth goals.",
   },
   {
     q: "What is included in your adult SEO packages?",
