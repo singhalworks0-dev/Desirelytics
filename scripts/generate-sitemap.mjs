@@ -8,7 +8,7 @@ import { fileURLToPath } from "url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const SITE_URL = "https://desirelytics.com"; // 👈 update if the live domain is different
-const WP_URL = "https://yourblog.com/wp-json/wp/v2"; // 👈 keep in sync with src/lib/wordpress.js
+const WP_URL = "https://blog.desirelytics.com/wp-json/wp/v2";
 
 // Static routes — keep this in sync with src/routes/AppRoutes.jsx
 const staticRoutes = [

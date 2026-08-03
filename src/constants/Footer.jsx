@@ -86,6 +86,10 @@ export default function Footer() {
       { label: "Germany", href: "/local/germany" },
       { label: "Dubai", href: "/local/dubai" },
       { label: "Portugal", href: "/local/portugal" },
+      { label: "Gurugram", href: "/local/gurugram" },
+      { label: "Lucknow", href: "/local/Lucknow" },
+      { label: "Bengaluru", href: "/local/bangalore" },
+
     ],
   },
 

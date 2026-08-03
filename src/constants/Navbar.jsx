@@ -26,6 +26,11 @@ const LOCAL_SEO = [
   { label: "SEO in USA", href: "/local/usa" },
   { label: "SEO in Australia", href: "/local/australia" },
   { label: "SEO in Germany", href: "/local/germany" },
+  { label: "SEO in Lucknow", href: "/local/lucknow" },
+  { label: "SEO in Gurugram", href: "/local/gurugram" },
+  { label: "SEO in Bengaluru", href: "/local/bangalore" },
+
+
 ];
 
 const DEVELOPMENT = [

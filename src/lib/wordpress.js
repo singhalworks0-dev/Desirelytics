@@ -1,5 +1,4 @@
-const WP_URL = "https://yourblog.com/wp-json/wp/v2"; // 👈 replace with your WP REST API base
-
+const WP_URL = "https://blog.desirelytics.com/wp-json/wp/v2";
 const GRADIENTS = [
   "from-indigo-600 via-blue-600 to-cyan-500",
   "from-fuchsia-600 via-pink-600 to-purple-600",

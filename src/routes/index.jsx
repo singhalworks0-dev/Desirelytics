@@ -17,6 +17,11 @@ import Portugal from "../pages/local_pages/Portugal";
 import Usa from "../pages/local_pages/Usa";
 import Australia from "../pages/local_pages/Australia";
 import Germany from "../pages/local_pages/Germany";
+import Lucknow from "../pages/local_pages/Lucknow";
+import Gurugram from "../pages/local_pages/Gurugram";
+import Bangalore from "../pages/local_pages/Bangalore";
+
+
 
 // Service pages
 import Affiliate from "../pages/service_pages/Affiliate";
@@ -57,7 +62,11 @@ const routes = [
       { path: "local/portugal", element: <Portugal /> },
       { path: "local/usa", element: <Usa /> },
       { path: "local/australia", element: <Australia /> },
-      { path: "local/germany", element: <Germany /> },
+      { path: "local/germany", element: <Germany /> },      
+      { path: "local/lucknow", element: <Lucknow /> },
+      { path: "local/gurugram", element: <Gurugram /> },
+      { path: "local/bangalore", element: <Bangalore /> },
+
 
       { path: "services/affiliate-seo", element: <Affiliate /> },
       { path: "services/ai-companion-seo", element: <AiCompanion /> },
