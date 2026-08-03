@@ -271,14 +271,16 @@ export default function Navbar() {
                                       </div>
                                     </div>
 
-                                    {/* Mobile submenu (stacked under parent) */}
-                                    <div className="block md:hidden mt-2 pl-4">
-                                      {item.items.map((sub) => (
-                                        <Link key={sub.label} to={sub.href} className={dropdownLinkClass + " block"}>
-                                          {sub.label}
-                                        </Link>
-                                      ))}
-                                    </div>
+                                    {/* Mobile submenu (stacked under parent) - only show when parent dropdown is open */}
+                                    {openDropdown === link.label && (
+                                      <div className="block md:hidden mt-2 pl-4">
+                                        {item.items.map((sub) => (
+                                          <Link key={sub.label} to={sub.href} className={dropdownLinkClass + " block"}>
+                                            {sub.label}
+                                          </Link>
+                                        ))}
+                                      </div>
+                                    )}
                                   </>
                                 ) : (
                                   <Link to={item.href} className={dropdownLinkClass}>
