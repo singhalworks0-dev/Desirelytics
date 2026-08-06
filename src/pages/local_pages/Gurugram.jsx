@@ -10,7 +10,7 @@ export default function Home() {
       <Seo
         title="SEO Services in Gurugram"
         description="Specialist SEO and digital marketing for adult and niche industry brands operating in Gurugram."
-        path="/local/gurugram"
+        path="/local/seo-in-gurugram"
       />
       <Navbar />
       <LocationPageLayout data={gurugramAdultSeoData} />

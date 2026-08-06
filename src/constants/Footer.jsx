@@ -23,7 +23,19 @@ const Linkedin = ({ className }) => (
 
 export default function Footer() {
   const [mounted, setMounted] = useState(false);
+  const [subEmail, setSubEmail] = useState("");
+  const [subStatus, setSubStatus] = useState("idle");
   const sectionRef = useRef(null);
+
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    if (!subEmail.trim()) return;
+    const subject = encodeURIComponent("New Newsletter Subscription");
+    const body = encodeURIComponent(`Please subscribe my email for monthly SEO insights:\n\nEmail: ${subEmail}`);
+    window.location.href = `mailto:admin@desirelytics.com?subject=${subject}&body=${body}`;
+    setSubStatus("success");
+    setSubEmail("");
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -80,16 +92,15 @@ export default function Footer() {
   {
     title: "Locations",
     links: [
-      { label: "United Kingdom", href: "/local/uk" },
-      { label: "United States", href: "/local/usa" },
-      { label: "Australia", href: "/local/australia" },
-      { label: "Germany", href: "/local/germany" },
-      { label: "Dubai", href: "/local/dubai" },
-      { label: "Portugal", href: "/local/portugal" },
-      { label: "Gurugram", href: "/local/gurugram" },
-      { label: "Lucknow", href: "/local/Lucknow" },
-      { label: "Bengaluru", href: "/local/bangalore" },
-
+      { label: "United Kingdom", href: "/local/seo-in-uk" },
+      { label: "United States", href: "/local/seo-in-usa" },
+      { label: "Australia", href: "/local/seo-in-australia" },
+      { label: "Germany", href: "/local/seo-in-germany" },
+      { label: "Dubai", href: "/local/seo-in-dubai" },
+      { label: "Portugal", href: "/local/seo-in-portugal" },
+      { label: "Gurugram", href: "/local/seo-in-gurugram" },
+      { label: "Lucknow", href: "/local/seo-in-lucknow" },
+      { label: "Bengaluru", href: "/local/seo-in-bangalore" },
     ],
   },
 
@@ -147,6 +158,12 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2.5 text-xs sm:text-sm text-gray-400">
                 <Phone className="h-4 w-4 shrink-0 text-red-500" />
+                <a href="https://wa.me/15067006866" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
+                  +1 506 700 6866 (US / WhatsApp)
+                </a>
+              </div>
+              <div className="flex items-center gap-2.5 text-xs sm:text-sm text-gray-400">
+                <Phone className="h-4 w-4 shrink-0 text-red-500" />
                 +966576608170
               </div>
             </div>
@@ -195,16 +212,27 @@ export default function Footer() {
                 Get Free Audit
               </Link>
 
-              <div className="mt-5 flex flex-col sm:flex-row gap-3">
+              <form onSubmit={handleSubscribe} className="mt-5 flex flex-col sm:flex-row gap-3">
                 <input
                   type="email"
-                  placeholder="Your email"
+                  required
+                  value={subEmail}
+                  onChange={(e) => setSubEmail(e.target.value)}
+                  placeholder="Your email for insights"
                   className="w-full rounded-full border border-white/10 bg-white/[0.05] px-4 py-2.5 text-xs sm:text-sm text-white placeholder:text-gray-500 outline-none transition-colors focus:border-red-500/40"
                 />
-                <button className="shrink-0 rounded-full bg-gradient-to-r from-red-500 to-purple-600 px-6 py-2.5 text-xs sm:text-sm font-semibold text-white transition-all hover:scale-[1.02] active:scale-[0.98]">
+                <button
+                  type="submit"
+                  className="shrink-0 rounded-full bg-gradient-to-r from-red-500 to-purple-600 px-6 py-2.5 text-xs sm:text-sm font-semibold text-white transition-all hover:scale-[1.02] active:scale-[0.98]"
+                >
                   Subscribe
                 </button>
-              </div>
+              </form>
+              {subStatus === "success" && (
+                <p className="mt-3 text-xs text-emerald-400">
+                  Thank you! Subscription inquiry created to admin@desirelytics.com.
+                </p>
+              )}
             </div>
           </div>
         </div>
@@ -272,28 +300,11 @@ export default function Footer() {
           <a href="#" className="hover:text-gray-300 transition-colors">Privacy</a>
           <a href="#" className="hover:text-gray-300 transition-colors">Terms</a>
           <a href="#" className="hover:text-gray-300 transition-colors">Cookies</a>
-          <a href="#" className="hover:text-gray-300 transition-colors">Disclaimer</a>
           <a href="#" className="hover:text-gray-300 transition-colors">DMCA</a>
-          <a href="#" className="hover:text-gray-300 transition-colors">Sitemap</a>
+          <a href="/sitemap.xml" className="hover:text-gray-300 transition-colors">Sitemap</a>
         </div>
 
         <span>Global · English</span>
-      </div>
-
-      {/* Floating chat buttons */}
-      <div className="fixed bottom-5 left-5 z-50 flex flex-col gap-3">
-        <a
-          href="#"
-          className="flex h-12 w-12 items-center justify-center rounded-full bg-green-500 text-white shadow-lg transition-transform hover:scale-110"
-        >
-          <MessageCircle className="h-5 w-5" />
-        </a>
-        <a
-          href="#"
-          className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-500 text-white shadow-lg transition-transform hover:scale-110"
-        >
-          <Send className="h-5 w-5" />
-        </a>
       </div>
     </footer>
   );

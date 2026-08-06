@@ -26,10 +26,10 @@ export default function Home() {
   return (
     <>
     <Seo
-  title="Web Design Services"
-  description="Custom, conversion-focused web design for adult and niche industry brands, built to rank and convert."
-  path="/development/web-design"
-/>
+      title="Professional Adult Web Design Services | Responsive Website Design | Desirelytics"
+      description="Create stunning, responsive, and SEO-friendly websites with Desirelytics. Our custom web design services help businesses enhance user experience, boost conversions, and grow online."
+      path="/development/web-design"
+    />
       <Navbar />
       <HeroSection />
       <TrustedBySection/>

@@ -11,7 +11,7 @@ export default function Home() {
     <Seo
   title="SEO Services in Portugal"
   description="Specialist SEO and digital marketing for adult and niche industry brands operating in Portugal."
-  path="/local/portugal"
+  path="/local/seo-in-portugal"
 />
       <Navbar />
       <LocationPageLayout data={portugalAdultSeoData} />

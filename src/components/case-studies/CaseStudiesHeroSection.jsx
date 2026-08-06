@@ -127,7 +127,7 @@ export default function CaseStudiesHeroSection() {
   return (
     <section
       aria-labelledby="case-studies-heading"
-      className="relative bg-[#0a0612] py-20 px-6 sm:px-10 overflow-hidden"
+      className="relative bg-[#0a0612] pt-8 sm:pt-12 pb-16 px-6 sm:px-10 overflow-hidden"
     >
       <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[40rem] h-72 bg-rose-800/10 rounded-full blur-3xl" />
 

@@ -1,3 +1,4 @@
+# Allow indexing of all pages for all search engine crawlers
 User-agent: *
 Allow: /
 

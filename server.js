@@ -72,6 +72,13 @@ app.post('/api/audit', async (req, res) => {
   }
 });
 
+app.post('/api/notify-visitor', async (req, res) => {
+  const { eventType, page, actionDetails, timestamp } = req.body || {};
+  const recipient = "admin@desirelytics.com";
+  console.log(`[VISITOR TRACKER] Notification target ${recipient}: ${eventType} on ${page}`, actionDetails || {});
+  return res.status(200).json({ success: true, recipient, loggedAt: timestamp });
+});
+
 app.use(express.static(path.join(__dirname, 'dist')));
 
 app.get('*', (req, res) => {

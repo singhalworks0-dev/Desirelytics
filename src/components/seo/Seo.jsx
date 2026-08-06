@@ -23,7 +23,9 @@ export default function Seo({
   noindex = false,
   type = "website",
 }) {
-  const fullTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} — Specialist SEO & Digital Marketing`;
+  const fullTitle = title
+    ? (title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`)
+    : `${SITE_NAME} — Specialist SEO & Digital Marketing`;
   const canonical = `${SITE_URL}${path === "/" ? "" : path}`;
 
   return (

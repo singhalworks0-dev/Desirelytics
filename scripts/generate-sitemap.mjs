@@ -20,12 +20,15 @@ const staticRoutes = [
   { path: "/development/app-development", priority: "0.7", changefreq: "monthly" },
   { path: "/development/adult-website-development", priority: "0.7", changefreq: "monthly" },
 
-  { path: "/local/uk", priority: "0.6", changefreq: "monthly" },
-  { path: "/local/dubai", priority: "0.6", changefreq: "monthly" },
-  { path: "/local/portugal", priority: "0.6", changefreq: "monthly" },
-  { path: "/local/usa", priority: "0.6", changefreq: "monthly" },
-  { path: "/local/australia", priority: "0.6", changefreq: "monthly" },
-  { path: "/local/germany", priority: "0.6", changefreq: "monthly" },
+  { path: "/local/seo-in-uk", priority: "0.6", changefreq: "monthly" },
+  { path: "/local/seo-in-dubai", priority: "0.6", changefreq: "monthly" },
+  { path: "/local/seo-in-portugal", priority: "0.6", changefreq: "monthly" },
+  { path: "/local/seo-in-usa", priority: "0.6", changefreq: "monthly" },
+  { path: "/local/seo-in-australia", priority: "0.6", changefreq: "monthly" },
+  { path: "/local/seo-in-germany", priority: "0.6", changefreq: "monthly" },
+  { path: "/local/seo-in-lucknow", priority: "0.6", changefreq: "monthly" },
+  { path: "/local/seo-in-gurugram", priority: "0.6", changefreq: "monthly" },
+  { path: "/local/seo-in-bangalore", priority: "0.6", changefreq: "monthly" },
 
   { path: "/services/affiliate-seo", priority: "0.7", changefreq: "monthly" },
   { path: "/services/ai-companion-seo", priority: "0.7", changefreq: "monthly" },
@@ -44,6 +47,7 @@ const staticRoutes = [
 
   { path: "/contact", priority: "0.6", changefreq: "yearly" },
   { path: "/free-audit", priority: "0.8", changefreq: "yearly" },
+  { path: "/ppc-services", priority: "0.8", changefreq: "monthly" },
   { path: "/blog", priority: "0.8", changefreq: "daily" },
 ];
 

@@ -11,7 +11,7 @@ export default function Home() {
     <Seo
   title="SEO Services in Dubai"
   description="Specialist SEO and digital marketing for adult and niche industry brands operating in Dubai and the UAE."
-  path="/local/dubai"
+  path="/local/seo-in-dubai"
 />
       <Navbar />
       <LocationPageLayout data={dubaiAdultSeoData} />

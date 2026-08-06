@@ -59,7 +59,7 @@ export default function PricingHeroSection() {
   return (
     <section
       aria-labelledby="pricing-hero-heading"
-      className="relative bg-gradient-to-b from-[#120a1f] via-[#0c0815] to-[#0a0612] py-20 px-6 sm:px-10 overflow-hidden"
+      className="relative bg-gradient-to-b from-[#120a1f] via-[#0c0815] to-[#0a0612] pt-8 sm:pt-12 pb-16 px-6 sm:px-10 overflow-hidden"
     >
       {/* ambient glow blobs */}
       <div className="pointer-events-none absolute top-0 left-1/3 w-96 h-96 bg-fuchsia-700/15 rounded-full blur-3xl" />

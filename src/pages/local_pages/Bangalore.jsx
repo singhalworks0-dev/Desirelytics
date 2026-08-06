@@ -10,7 +10,7 @@ export default function Home() {
       <Seo
         title="SEO Services in Bangalore"
         description="Specialist SEO and digital marketing for adult and niche industry brands operating in Bangalore."
-        path="/local/bangalore"
+        path="/local/seo-in-bangalore"
       />
       <Navbar />
       <LocationPageLayout data={bangaloreAdultSeoData} />

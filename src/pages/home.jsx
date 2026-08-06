@@ -1,6 +1,6 @@
 import Seo from "../components/seo/Seo";   // adjust "../" depth for nested folders
 import Navbar from "../constants/Navbar";
-import HeroSection from "../components/home/Hero_section";
+import HeroSection from "../components/home/HeroSection";
 import TechnicalExcellence from "../components/home/TechnicalExcellence";
 import TrustedWorldwide from "../components/home/TrustedWorldwide";
 import NicheExpertise from "../components/home/NicheExpertise";
@@ -21,10 +21,10 @@ export default function Home() {
   return (
     <>
     <Seo
-  title="SEO Agency for Adult, Niche & High-Risk Industries"
-  description="Risk-safe, fully confidential SEO and digital marketing for adult, niche, and high-risk brands. Win rankings on Google and AI search without getting flagged."
-  path="/"
-/>
+      title="AI-Powered Adult Digital Marketing Agency | Desirelytics"
+      description="Grow your business with Desirelytics' AI-powered Adult SEO, PPC, web development, and performance marketing solutions designed to deliver measurable results."
+      path="/"
+    />
       <Navbar />
       <HeroSection />
       <TechnicalExcellence />

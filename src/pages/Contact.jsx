@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { MapPin, Mail, Phone, Send, Clock, ShieldCheck } from "lucide-react";
 import Seo from "../components/seo/Seo";   // adjust "../" depth for nested folders
-
+import Navbar from "../constants/Navbar";
+import Footer from "../constants/Footer";
 
 const CONTACT_METHODS = [
   {
@@ -9,6 +10,12 @@ const CONTACT_METHODS = [
     label: "Email",
     value: "admin@desirelytics.com",
     href: "mailto:admin@desirelytics.com",
+  },
+  {
+    icon: Phone,
+    label: "US Phone / WhatsApp",
+    value: "+1 506 700 6866",
+    href: "https://wa.me/15067006866?text=Hi%20Desirelytics%20team,%20I%20would%20like%20to%20inquire%20about%20your%20services.",
   },
   {
     icon: Phone,
@@ -31,7 +38,7 @@ const TRUST_POINTS = [
 
 export default function Contact() {
   const [mounted, setMounted] = useState(false);
-  const [form, setForm] = useState({ name: "", email: "", website: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", website: "", telegram: "", message: "" });
   const [status, setStatus] = useState("idle"); // idle | submitting | success | error
   const sectionRef = useRef(null);
 
@@ -55,11 +62,13 @@ export default function Contact() {
     e.preventDefault();
     setStatus("submitting");
     try {
-      // TODO: wire this up to your form backend (Formspree, EmailJS, serverless function, etc.)
-      // await fetch("/api/contact", { method: "POST", body: JSON.stringify(form) });
-      await new Promise((r) => setTimeout(r, 900)); // placeholder delay
+      const subject = encodeURIComponent(`Contact Form Submission: ${form.name}`);
+      const body = encodeURIComponent(
+        `Name: ${form.name}\nEmail: ${form.email}\nWebsite: ${form.website || "N/A"}\nTelegram/WhatsApp: ${form.telegram || "N/A"}\n\nMessage:\n${form.message}`
+      );
+      window.location.href = `mailto:admin@desirelytics.com?subject=${subject}&body=${body}`;
       setStatus("success");
-      setForm({ name: "", email: "", website: "", message: "" });
+      setForm({ name: "", email: "", website: "", telegram: "", message: "" });
     } catch {
       setStatus("error");
     }
@@ -67,11 +76,13 @@ export default function Contact() {
 
   return (
     <>
- <Seo
+      <Seo
         title="Contact Us"
         description="Get in touch with Desirelytics for a confidential consultation on your SEO and digital marketing strategy."
         path="/contact"
-      />      <main className="relative overflow-hidden bg-gradient-to-b from-[#0a0710] via-[#120c1e] to-[#0a0710] px-4 sm:px-6 lg:px-8 pt-10 sm:pt-14 pb-20 sm:pb-28">
+      />
+      <Navbar />
+      <main className="relative overflow-hidden bg-gradient-to-b from-[#0a0710] via-[#120c1e] to-[#0a0710] px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 pb-16 sm:pb-20">
         {/* Background: gradient glows + subtle grid, no photography */}
         <div className="pointer-events-none absolute inset-0 opacity-[0.04] bg-[linear-gradient(to_right,#fff_1px,transparent_1px),linear-gradient(to_bottom,#fff_1px,transparent_1px)] bg-[size:48px_48px]" />
         <div className="pointer-events-none absolute -top-24 left-10 h-72 w-72 rounded-full bg-red-600/10 blur-3xl" />
@@ -182,19 +193,35 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="mt-4">
-                  <label htmlFor="website" className="mb-1.5 block text-xs font-semibold text-gray-400">
-                    Website / platform URL <span className="text-gray-600">(optional)</span>
-                  </label>
-                  <input
-                    id="website"
-                    name="website"
-                    type="text"
-                    value={form.website}
-                    onChange={handleChange}
-                    placeholder="https://yourplatform.com"
-                    className="w-full rounded-xl border border-white/10 bg-white/[0.05] px-4 py-2.5 text-sm text-white placeholder:text-gray-500 outline-none transition-colors focus:border-red-500/40"
-                  />
+                <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="website" className="mb-1.5 block text-xs font-semibold text-gray-400">
+                      Website / platform URL <span className="text-gray-600">(optional)</span>
+                    </label>
+                    <input
+                      id="website"
+                      name="website"
+                      type="text"
+                      value={form.website}
+                      onChange={handleChange}
+                      placeholder="https://yourplatform.com"
+                      className="w-full rounded-xl border border-white/10 bg-white/[0.05] px-4 py-2.5 text-sm text-white placeholder:text-gray-500 outline-none transition-colors focus:border-red-500/40"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="telegram" className="mb-1.5 block text-xs font-semibold text-gray-400">
+                      Telegram / WhatsApp <span className="text-gray-600">(optional)</span>
+                    </label>
+                    <input
+                      id="telegram"
+                      name="telegram"
+                      type="text"
+                      value={form.telegram}
+                      onChange={handleChange}
+                      placeholder="@username or phone number"
+                      className="w-full rounded-xl border border-white/10 bg-white/[0.05] px-4 py-2.5 text-sm text-white placeholder:text-gray-500 outline-none transition-colors focus:border-red-500/40"
+                    />
+                  </div>
                 </div>
 
                 <div className="mt-4">
@@ -237,6 +264,7 @@ export default function Contact() {
           </div>
         </div>
       </main>
+      <Footer />
     </>
   );
 }

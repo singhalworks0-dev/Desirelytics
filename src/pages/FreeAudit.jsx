@@ -117,7 +117,7 @@ export default function FreeAuditTool() {
       />
             <Navbar />
 
-    <section className="relative overflow-hidden bg-gradient-to-br from-indigo-600 via-fuchsia-600 to-purple-600 px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-indigo-600 via-fuchsia-600 to-purple-600 px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 pb-16 sm:pb-20">
       {/* subtle texture */}
       <div className="pointer-events-none absolute inset-0 opacity-[0.06] bg-[radial-gradient(circle,#fff_1px,transparent_1px)] bg-[size:28px_28px]" />
 
@@ -132,9 +132,15 @@ export default function FreeAuditTool() {
         </h2>
 
         <p className={`mt-4 text-sm sm:text-base text-white/85 leading-relaxed ${reveal()}`} style={style(120)}>
-          Run a free, instant SEO audit powered by Google PageSpeed Insights.
-          Get real performance, SEO, and accessibility scores — plus a
-          prioritized list of fixes — in seconds.
+          Run an instant SEO audit powered by Google PageSpeed Insights — or{" "}
+          <a href="mailto:admin@desirelytics.com?subject=Request%20Free%20Audit%20Report" className="font-bold underline text-white hover:text-red-200">
+            email us
+          </a>{" "}
+          /{" "}
+          <a href="/contact" className="font-bold underline text-white hover:text-red-200">
+            fill out our contact form
+          </a>{" "}
+          to receive a complete, custom audit report from our SEO team!
         </p>
 
         <form
@@ -243,20 +249,32 @@ export default function FreeAuditTool() {
               </ul>
             </div>
 
-            <p className="mt-6 border-t border-white/10 pt-4 text-xs text-gray-500">
-              Want the full 176-point breakdown with a prioritized action
-              plan?{" "}
-              <a href="/contact" className="font-semibold text-red-400 hover:text-red-300">
-                Talk to our team →
-              </a>
-            </p>
+            <div className="mt-6 border-t border-white/10 pt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-gray-400">
+              <span>
+                Want the full 176-point audit report & growth roadmap?
+              </span>
+              <div className="flex flex-wrap items-center gap-3">
+                <a
+                  href="mailto:admin@desirelytics.com?subject=Request%20Full%20Audit%20Report"
+                  className="font-bold text-red-400 hover:text-red-300 underline"
+                >
+                  Email Us
+                </a>
+                <span className="text-gray-600">or</span>
+                <a
+                  href="/contact"
+                  className="font-bold text-red-400 hover:text-red-300 underline"
+                >
+                  Fill Contact Form →
+                </a>
+              </div>
+            </div>
           </div>
         )}
       </div>
     </section>
-          <Footer />
-
-        </>
+    <Footer />
+  </>
 
   );
 }

@@ -9,8 +9,8 @@ export default function AdultWebsiteDevelopment() {
   return (
     <>
       <Seo
-        title={adultWebsiteDevelopmentData.meta.title}
-        description={adultWebsiteDevelopmentData.meta.description}
+        title="Custom Website Development Services | Desirelytics"
+        description="Build fast, responsive, SEO-friendly websites with Desirelytics. We create high-performing websites that generate leads and enhance user experience."
         path="/development/adult-website-development"
       />
 

@@ -87,9 +87,15 @@ export function FreeAIAuditSection() {
 
         <Reveal delay={200}>
           <p className="mt-5 text-slate-600 text-sm sm:text-base leading-relaxed max-w-lg mx-auto">
-            See where your adult site stands before you pick a package. Run
-            a free AI-powered SEO audit and get a clear, prioritized fix
-            list in seconds. No paid plan needed.
+            See where your website stands before you pick a package. Run an instant audit below, or{" "}
+            <a href="mailto:admin@desirelytics.com?subject=Request%20Free%20Audit%20Report" className="font-semibold text-purple-600 underline hover:text-purple-700">
+              email us
+            </a>{" "}
+            /{" "}
+            <Link to="/contact" className="font-semibold text-purple-600 underline hover:text-purple-700">
+              fill out our contact form
+            </Link>{" "}
+            to receive a complete audit report straight to your inbox!
           </p>
         </Reveal>
 

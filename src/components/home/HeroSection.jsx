@@ -115,9 +115,9 @@ export default function Hero() {
         >
           <div className="relative aspect-[4/5] max-h-[520px] w-full overflow-hidden rounded-3xl border border-white/10">
             <img
-              src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=900&auto=format&fit=crop"
-              alt="Adult industry growth"
-              className="h-full w-full object-cover"
+              src="/business_growth_banner.png"
+              alt="Desirelytics business growth analytics"
+              className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
             />
             {/* Color wash to match theme */}
             <div className="absolute inset-0 bg-gradient-to-br from-red-700/30 via-fuchsia-800/20 to-purple-900/40 mix-blend-overlay" />

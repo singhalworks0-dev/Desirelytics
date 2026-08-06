@@ -1,7 +1,7 @@
 import Layout from "../Layout";
 
 // Core pages
-import Home from "../pages/home";
+import Home from "../pages/Home";
 import Pricing from "../pages/Pricing";
 import CaseStudies from "../pages/CaseStudies";
 
@@ -43,6 +43,7 @@ import Contact from "../pages/Contact";
 import FreeAudit from "../pages/FreeAudit";
 import BlogPage from "../pages/Blog";
 import BlogPost from "../pages/BlogPost";
+import PpcServices from "../pages/PpcServices";
 
 const routes = [
   {
@@ -57,15 +58,15 @@ const routes = [
       { path: "development/app-development", element: <AppDevelopment /> },
       { path: "development/adult-website-development", element: <AdultWebsiteDevelopment /> },
 
-      { path: "local/uk", element: <Uk /> },
-      { path: "local/dubai", element: <Dubai /> },
-      { path: "local/portugal", element: <Portugal /> },
-      { path: "local/usa", element: <Usa /> },
-      { path: "local/australia", element: <Australia /> },
-      { path: "local/germany", element: <Germany /> },      
-      { path: "local/lucknow", element: <Lucknow /> },
-      { path: "local/gurugram", element: <Gurugram /> },
-      { path: "local/bangalore", element: <Bangalore /> },
+      { path: "local/seo-in-uk", element: <Uk /> },
+      { path: "local/seo-in-dubai", element: <Dubai /> },
+      { path: "local/seo-in-portugal", element: <Portugal /> },
+      { path: "local/seo-in-usa", element: <Usa /> },
+      { path: "local/seo-in-australia", element: <Australia /> },
+      { path: "local/seo-in-germany", element: <Germany /> },      
+      { path: "local/seo-in-lucknow", element: <Lucknow /> },
+      { path: "local/seo-in-gurugram", element: <Gurugram /> },
+      { path: "local/seo-in-bangalore", element: <Bangalore /> },
 
 
       { path: "services/affiliate-seo", element: <Affiliate /> },
@@ -85,6 +86,7 @@ const routes = [
 
       { path: "contact", element: <Contact /> },
       { path: "free-audit", element: <FreeAudit /> },
+      { path: "ppc-services", element: <PpcServices /> },
       { path: "blog", element: <BlogPage /> },
       {
         path: "blog/:slug",

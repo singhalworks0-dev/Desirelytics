@@ -11,7 +11,7 @@ export default function Home() {
     <Seo
   title="SEO Services in Australia"
   description="Specialist SEO and digital marketing for adult and niche industry brands operating in Australia."
-  path="/local/australia"
+  path="/local/seo-in-australia"
 />
       <Navbar />
       <LocationPageLayout data={australiaAdultSeoData} />

@@ -412,7 +412,7 @@ function HeroForm({ data }) {
             />
             <input
               type="text"
-              placeholder="Telegram ID"
+              placeholder="Telegram / WhatsApp (optional)"
               value={values.telegram}
               onChange={handleChange("telegram")}
               className="lsp-input"

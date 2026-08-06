@@ -16,26 +16,25 @@ const SEO_SERVICES = [
   { label: "Link Building", href: "/services/link-building" },
   { label: "Content Marketing", href: "/services/content-marketing" },
   { label: "Programmatic SEO", href: "/services/programmatic-seo" },
+  { label: "PPC Management Services", href: "/ppc-services" },
 ];
 
 // TODO: these local pages don't have routes/components yet — update hrefs once created
 const LOCAL_SEO = [
-  { label: "SEO in UK", href: "/local/uk" },
-  { label: "SEO in Dubai", href: "/local/dubai" },
-  { label: "SEO in Portugal", href: "/local/portugal" },
-  { label: "SEO in USA", href: "/local/usa" },
-  { label: "SEO in Australia", href: "/local/australia" },
-  { label: "SEO in Germany", href: "/local/germany" },
+  { label: "SEO in UK", href: "/local/seo-in-uk" },
+  { label: "SEO in Dubai", href: "/local/seo-in-dubai" },
+  { label: "SEO in Portugal", href: "/local/seo-in-portugal" },
+  { label: "SEO in USA", href: "/local/seo-in-usa" },
+  { label: "SEO in Australia", href: "/local/seo-in-australia" },
+  { label: "SEO in Germany", href: "/local/seo-in-germany" },
   {
     label: "SEO in India",
     items: [
-      { label: "SEO in Lucknow", href: "/local/lucknow" },
-      { label: "SEO in Bengaluru", href: "/local/bangalore" },
-      { label: "SEO in Gurugram", href: "/local/gurugram" },
+      { label: "SEO in Lucknow", href: "/local/seo-in-lucknow" },
+      { label: "SEO in Bengaluru", href: "/local/seo-in-bangalore" },
+      { label: "SEO in Gurugram", href: "/local/seo-in-gurugram" },
     ],
   },
-
-
 ];
 
 // (Nested India links are now part of LOCAL_SEO)
@@ -52,6 +51,7 @@ const NAV_LINKS = [
   { label: "Development", type: "simple", items: DEVELOPMENT },
   { label: "Case Studies", href: "/case-studies" },
   { label: "Pricing", href: "/pricing" },
+  { label: "Blog", href: "/blog" },
 ];
 
 export default function Navbar() {

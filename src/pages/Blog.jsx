@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Sparkles, Search } from "lucide-react";
 import { getPosts, getCategories } from "../lib/wordpress";
 import Seo from "../components/seo/Seo";   // adjust "../" depth for nested folders
-
+import Navbar from "../constants/Navbar";
+import Footer from "../constants/Footer";
 
 export default function BlogPage() {
   const [mounted, setMounted] = useState(false);
@@ -44,21 +45,24 @@ export default function BlogPage() {
   const style = (delay) => ({ transitionDelay: mounted ? `${delay}ms` : "0ms" });
 
   return (
-    <><Seo
+    <>
+      <Seo
         title="Blog"
         description="Insights, strategies, and updates on SEO for adult, niche, and high-risk industries."
         path="/blog"
       />
+      <Navbar />
 
-    <main className="relative overflow-hidden bg-[#0a0710] min-h-screen px-4 sm:px-6 lg:px-8 py-16 sm:py-24 md:py-28">
-      {/* Glow blobs */}
-      <div className="pointer-events-none absolute -top-16 left-1/3 h-48 w-48 sm:h-72 sm:w-72 rounded-full bg-red-600/10 blur-3xl" />
-      <div className="pointer-events-none absolute top-1/2 -right-16 h-56 w-56 sm:h-80 sm:w-80 rounded-full bg-purple-700/10 blur-3xl" />
-      <div className="pointer-events-none absolute bottom-0 left-10 h-44 w-44 sm:h-64 sm:w-64 rounded-full bg-fuchsia-600/10 blur-3xl" />
+      <main className="relative overflow-hidden bg-[#0a0710] min-h-screen px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 pb-16 sm:pb-20">
+        {/* Glow blobs */}
+        <div className="pointer-events-none absolute -top-16 left-1/3 h-48 w-48 sm:h-72 sm:w-72 rounded-full bg-red-600/10 blur-3xl" />
+        <div className="pointer-events-none absolute top-1/2 -right-16 h-56 w-56 sm:h-80 sm:w-80 rounded-full bg-purple-700/10 blur-3xl" />
+        <div className="pointer-events-none absolute bottom-0 left-10 h-44 w-44 sm:h-64 sm:w-64 rounded-full bg-fuchsia-600/10 blur-3xl" />
 
-      <div className="relative mx-auto max-w-6xl">
-        {/* Header */}
-        <div className="text-center">
+        <div className="relative mx-auto max-w-6xl">
+
+          {/* Header */}
+          <div className="text-center">
           <div className={reveal()} style={style(0)}>
             <div className="inline-flex items-center gap-2 rounded-full border border-red-500/30 bg-gradient-to-r from-red-950/60 to-purple-950/60 px-2.5 sm:px-3 py-1 sm:py-1.5">
               <span className="h-1.5 w-1.5 rounded-full bg-red-500 animate-pulse" />
@@ -262,8 +266,8 @@ export default function BlogPage() {
           </div>
         )}
       </div>
-    </main>
-        </>
-
+      </main>
+      <Footer />
+    </>
   );
 }
