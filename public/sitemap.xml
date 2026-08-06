@@ -199,8 +199,14 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://desirelytics.com/blog/9-seo-mistakes-businesses-make-and-how-to-fix-them</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://desirelytics.com/blog/hello-world</loc>
-    <lastmod>2026-07-30</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
